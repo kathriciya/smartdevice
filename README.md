@@ -1,0 +1,2 @@
+# smartdevice
+Проект Smart Device
