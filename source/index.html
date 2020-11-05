@@ -9,9 +9,197 @@
     <link rel="stylesheet" href="css/style.min.css">
 
 <body>
-  <head></head>
-  <main></main>
-  <footer></footer>
+  <head class="header">
+    <div class="header__container container">
+    <nav class="header__nav">
+      <div class="header__logo">
+        <img src="#" alt="Логотип компании">
+        <span>Service Device</span>
+        <span>умные технологии</span>
+      </div>
+      <div class="header__contacts">
+        <span>info@sd.ru</span>
+        <span>+7 (495) 000 52 52</span>
+      </div>
+      <a class="header__button" href="#">Заказать звонок</a>
+    </nav>
+  </div>
+  <div class="header__popup popup">
+    <div class="popup__wrap">
+      <button class="popup__cross cross button" type="button"></button>
+      <h3>Закажите звонок</h3>
+      <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+      <form class="popup__form form" method="POST" action="https://echo.htmlacademy.ru" enctype="multipart/form-data">
+        <p class="form__paragraph">
+          <input class="form__input" type="text" name="name" id="name" placeholder="Имя" aria-label="Введите имя" required>
+          <label class="visually-hidden" for="name">Введите имя</label>
+        </p>
+        <p class="form__paragraph">
+          <input class="form__input" type="tel" id="tel" name="tel" placeholder="Телефон"
+            aria-label="Введите телефон" required>
+          <label class="visually-hidden" for="tel">Введите номер телефона</label>
+        </p>
+        <p class="form__paragraph">
+          <textarea class="form__input" id="question" name="email" placeholder="Ваш вопрос" aria-label="Введите адрес почты" required>
+          <label class="visually-hidden" for="question">Введите ваш вопрос</label>
+        </p>
+        <p class="form__paragraph form__paragraph--checkbox">
+          <input class="form__checkbox visually-hidden" type="checkbox" name="checkbox" id="checkbox"
+            aria-label="Подтвердите обработку персональных данных" required>
+          <label class="form__checkbox-label" for="checkbox">Я согласен на обработку <span class="form__span">моих персональных данных</span></label>
+        </p>
+        <button class="form__button" type="submit">Отправить</button>
+      </form>
+    </div>
+  </div>
+  </head>
+  <main class="main">
+    <section class="promo">
+      <div class="promo__container container">
+        <h1 class="promo__title">Печатные платы</h1>
+        <p class="promo__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+        <a class="promo__button" href="#">Получить бесплатную консультацию</a>
+        <button class="promo__scroll" type="button" aria-label="Скролл вниз">Скролл вниз</button>
+      </div>
+    </section>
+    <section class="advantage">
+      <div class="advantage__container container">
+        <h2 class="advantage__title visually-hidden">Преимущества компании</h2>
+        <ul class="advantage__list">
+          <li class="advantage__item">
+            <h3 class="advantage__subtitle">Оперативные сроки</h3>
+            <p class="advantage__text">Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
+          </li>
+          <li class="advantage__item">
+            <h3 class="advantage__subtitle">Крупные поставщики</h3>
+            <p class="advantage__text">Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
+          </li>
+          <li class="advantage__item">
+            <h3 class="advantage__subtitle">Полная конфиденциальность</h3>
+            <p class="advantage__text">По желанию клиента мы обеспечиваем полную конфеденциальность.</p>
+          </li>
+          <li class="advantage__item">
+            <h3 class="advantage__subtitle">Персонализация стоимости</h3>
+            <p class="advantage__text">Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
+          </li>
+        </ul>
+      </div>
+
+    </section>
+    <section class="info">
+      <div class="info__container container">
+        <h2 class="info__title">О компании</h2>
+        <p class="info__text">Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
+        Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог..</p>
+        <a class="info__button" href="#">Подробнее</a>
+      </div>
+    </section>
+    <section class="service">
+      <div class="service__container container">
+        <h2 class="service__title">Service Device предлагает следующие товары и услуги</h2>
+        <ul class="service__list">
+          <li class="service__item">
+            <a class="service__link" href="#">
+              <h3 class="service__subtitle">Производство печатных плат</h3>
+            <img class="service__img" src="#" alt="#">
+            <button class="service__button"></button>
+          </a>
+        </li>
+          <li class="service__item">
+            <h3 class="service__subtitle">Монтаж печатных плат</h3>
+            <img class="service__img" src="#" alt="#">
+            <button class="service__button"></button>
+          </a>
+        </li>
+          <li class="service__item">
+            <h3 class="service__subtitle">Комплектующие для светотехники</h3>
+            <img class="service__img" src="#" alt="#">
+            <button class="service__button"></button>
+          </a>
+        </li>
+        </ul>
+      </div>
+    </section>
+    <section class="feedback">
+      <div class="feedback__container container">
+        <h2 class="feedback__title">Остались вопросы? Задайте их нам!</h2>
+        <p class="feedback__text">Мы проконсультируем Вас бесплатно</p>
+        <form class="feedback__form form" method="POST" action="https://echo.htmlacademy.ru" enctype="multipart/form-data">
+          <p class="form__paragraph">
+            <input class="form__input" type="text" name="name" id="name" placeholder="Имя" aria-label="Введите имя" required>
+            <label class="visually-hidden" for="name">Введите имя</label>
+          </p>
+          <p class="form__paragraph">
+            <input class="form__input" type="tel" id="tel" name="tel" placeholder="Телефон"
+              aria-label="Введите телефон" required>
+            <label class="visually-hidden" for="tel">Введите номер телефона</label>
+          </p>
+          <p class="form__paragraph">
+            <textarea class="form__input" id="question" name="email" placeholder="Ваш вопрос" aria-label="Введите адрес почты" required>
+            <label class="visually-hidden" for="question">Введите ваш вопрос</label>
+          </p>
+          <p class="form__paragraph form__paragraph--checkbox">
+            <input class="form__checkbox visually-hidden" type="checkbox" name="checkbox" id="checkbox"
+              aria-label="Подтвердите обработку персональных данных" required>
+            <label class="form__checkbox-label" for="checkbox">Я согласен на обработку <span class="form__span">моих персональных данных</span></label>
+          </p>
+          <button class="form__button" type="submit">Задать вопрос</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__logo">
+      <img src="#" alt="Логотип компании">
+      <span>Service Device</span>
+      <span>умные технологии</span>
+    </div>
+
+    <div class="footer__social social">
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link social__link--fb" href="https://facebook.com" aria-label="Мы в Фейсбуке" target="_blank"></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--ok" href="https://ok.com" aria-label="Мы в Одноклассниках" target="_blank"></a>
+        </li>
+        <li class="social__item social__item--vk">
+          <a class="social__link social__link--vk" href="https://vk.com" aria-label="Мы в Вконтакте" target="_blank"></a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer__sections">
+      <h3>Разделы сайта</h3>
+      <ul>
+        <li>О компании</li>
+        <li>Продукты</li>
+        <li>Производство печатных плат</li>
+        <li>Монтаж печатных плат</li>
+        <li>Комплектующие</li>
+        <li>Доставка</li>
+        <li>Контакты</li>
+      </ul>
+    </div>
+
+    <div class="footer__contacts">
+      <h3>Наш офис</h3>
+      <span>г. Мытищи, Олимпийский проспект, д.10</span>
+      <span>+7 (495) 589-40-50</span>
+      <span>+7 (925) 003-87-67</span>
+      <span>+7 (926) 926-080-79</span>
+    </div>
+
+    <div></div>
+
+    <div class="footer__copyright">
+      <span>Все права защищены</span>
+      <span>1999-2018 SD Service Devices</span>
+      <span>Условия конфиденциальности</span>
+      <span>Developed by wow studio</span>
+    </div>
+
+  </footer>
 </body>
 
   </head>
