@@ -7,52 +7,84 @@
     <title>Smart Device</title>
     <meta name="Description" content="Smart Device">
     <link rel="stylesheet" href="css/style.min.css">
+    <script>
+      document.createElement("picture");
+    </script>
+    <script src="js/picturefill.min.js" async></script>
+  </head>
 
 <body>
-  <head class="header">
+  <header class="header">
     <div class="header__container container">
-    <nav class="header__nav">
       <div class="header__logo">
-        <img src="#" alt="Логотип компании">
-        <span>Service Device</span>
-        <span>умные технологии</span>
+        <a class="header__link">
+          <picture>
+            <source media="(max-width: 767px)" srcset="img/logo-mobile@1x.webp 1x, img/logo-mobile@2x.webp 2x"
+              type="image/webp">
+            <source media="(max-width: 1023px)" srcset="img/logo-desktop@1x.webp 1x, img/logo-desktop@2x.webp 2x"
+              type="image/webp">
+            <source srcset="img/logo-desktop@1x.webp 1x, img/logo-desktop@2x.webp 2x" type="image/webp">
+            <source media="(max-width: 767px)" srcset="img/logo-mobile@1x.png 1x, img/logo-mobile@2x.png 2x">
+            <source media="(max-width: 1023px)" srcset="img/logo-desktop@1x.png 1x, img/logo-desktop@2x.png 2x">
+            <img class="header__img" src="img/logo-desktop@1x.png" srcset="img/logo-desktop@2x.png 2x" loading="lazy"
+              width="52" height="52" alt="Логотип компании">
+          </picture>
+        </a>
+        <div class="header__name">
+          <span class="header__first">Smart Device</span>
+          <span class="header__second">умные технологии</span>
+        </div>
       </div>
-      <div class="header__contacts">
-        <span>info@sd.ru</span>
-        <span>+7 (495) 000 52 52</span>
-      </div>
-      <a class="header__button" href="#">Заказать звонок</a>
-    </nav>
-  </div>
-  <div class="header__popup popup">
-    <div class="popup__wrap">
-      <button class="popup__cross cross button" type="button"></button>
-      <h3>Закажите звонок</h3>
-      <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-      <form class="popup__form form" method="POST" action="https://echo.htmlacademy.ru" enctype="multipart/form-data">
-        <p class="form__paragraph">
-          <input class="form__input" type="text" name="name" id="name" placeholder="Имя" aria-label="Введите имя" required>
-          <label class="visually-hidden" for="name">Введите имя</label>
-        </p>
-        <p class="form__paragraph">
-          <input class="form__input" type="tel" id="tel" name="tel" placeholder="Телефон"
-            aria-label="Введите телефон" required>
-          <label class="visually-hidden" for="tel">Введите номер телефона</label>
-        </p>
-        <p class="form__paragraph">
-          <textarea class="form__input" id="question" name="email" placeholder="Ваш вопрос" aria-label="Введите адрес почты" required>
-          <label class="visually-hidden" for="question">Введите ваш вопрос</label>
-        </p>
-        <p class="form__paragraph form__paragraph--checkbox">
-          <input class="form__checkbox visually-hidden" type="checkbox" name="checkbox" id="checkbox"
-            aria-label="Подтвердите обработку персональных данных" required>
-          <label class="form__checkbox-label" for="checkbox">Я согласен на обработку <span class="form__span">моих персональных данных</span></label>
-        </p>
-        <button class="form__button" type="submit">Отправить</button>
-      </form>
+      <nav class="header__nav">
+        <div class="header__contacts">
+          <a class="header__email" href="#" aria-label="Наш почтовый адрес">
+            <svg class="header__icon-email" width="19" height="14">
+              <use xlink:href="img/sprite_auto.svg#icon-email"></use>
+            </svg>
+            <span>info@sd.ru</span>
+          </a>
+          <a class="header__tel" href="tel:+7495005252" aria-label="Наш телефон">
+            <svg class="header__icon-tel" width="18" height="18">
+              <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
+            </svg>
+            <span>+7 (495) 000 52 52</span>
+          </a>
+        </div>
+        <a class="header__button" href="#">Заказать звонок</a>
+      </nav>
     </div>
-  </div>
-  </head>
+    <div class="header__popup popup">
+      <div class="popup__wrap">
+        <button class="popup__cross cross button" type="button"></button>
+        <h3>Закажите звонок</h3>
+        <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+        <form class="popup__form" method="POST" action="https://echo.htmlacademy.ru" enctype="multipart/form-data">
+          <p class="popup__paragraph">
+            <input class="popup__input" type="text" name="popup-name" id="popup-name" placeholder="Имя" aria-label="Введите имя"
+              required>
+            <label class="visually-hidden" for="popup-name">Введите имя</label>
+          </p>
+          <p class="popup__paragraph">
+            <input class="popup__input" type="tel" id="popup-tel" name="popup-tel" placeholder="Телефон" aria-label="Введите телефон"
+              required>
+            <label class="visually-hidden" for="popup-tel">Введите номер телефона</label>
+          </p>
+          <p class="popup__paragraph">
+            <textarea class="popup__input" id="popup-question" name="popup-question" placeholder="Ваш вопрос"
+              aria-label="Введите адрес почты" required></textarea>
+            <label class="visually-hidden" for="popup-question">Введите ваш вопрос</label>
+          </p>
+          <p class="popup__paragraph popup__paragraph--checkbox">
+            <input class="popup__checkbox visually-hidden" type="checkbox" name="popup-checkbox" id="popup-checkbox"
+              aria-label="Подтвердите обработку персональных данных" required>
+            <label class="popup__checkbox-label" for="popup-checkbox">Я согласен на обработку <span class="popup__span">моих
+                персональных данных</span></label>
+          </p>
+          <button class="popup__button" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </header>
   <main class="main">
     <section class="promo">
       <div class="promo__container container">
@@ -67,7 +99,7 @@
         <h2 class="advantage__title visually-hidden">Преимущества компании</h2>
         <ul class="advantage__list">
           <li class="advantage__item">
-            <h3 class="advantage__subtitle">Оперативные сроки</h3>
+            <h3 class="advantage__subtitle advantage__subtitle--clock">Оперативные сроки</h3>
             <p class="advantage__text">Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
           </li>
           <li class="advantage__item">
@@ -88,10 +120,15 @@
     </section>
     <section class="info">
       <div class="info__container container">
-        <h2 class="info__title">О компании</h2>
-        <p class="info__text">Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
-        Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог..</p>
-        <a class="info__button" href="#">Подробнее</a>
+        <div class="info__wrap">
+          <h2 class="info__title">О компании</h2>
+          <p class="info__text">Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые
+            технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
+          </p>
+          <p class="info__text info__text--second">
+            Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог<span>(РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники</span>.<span>Среди наших клиентов крупнейшие Производители светотехники России</span>.</p>
+          <a class="info__button" href="#">Подробнее</a>
+        </div>
       </div>
     </section>
     <section class="service">
@@ -101,22 +138,54 @@
           <li class="service__item">
             <a class="service__link" href="#">
               <h3 class="service__subtitle">Производство печатных плат</h3>
-            <img class="service__img" src="#" alt="#">
-            <button class="service__button"></button>
-          </a>
-        </li>
+              <picture>
+                <source media="(max-width: 767px)" srcset="img/production-mobile@1x.webp 1x, img/production-mobile@2x.webp 2x"
+                  type="image/webp">
+                <source media="(max-width: 1023px)" srcset="img/production-tablet@1x.webp 1x, img/production-tablet@2x.webp 2x"
+                  type="image/webp">
+                <source srcset="img/production-desktop@1x.webp 1x, img/production-desktop@2x.webp 2x" type="image/webp">
+                <source media="(max-width: 767px)" srcset="img/production-mobile@1x.png 1x, img/production-mobile@2x.png 2x">
+                <source media="(max-width: 1023px)" srcset="img/production-tablet@1x.png 1x, img/production-tablet@2x.png 2x">
+                <img class="tours__img" src="img/production-desktop@1x.png" srcset="img/production-desktop@2x.png 2x" loading="lazy"
+                  width="370" height="620" alt="Фото изготовления печатных плат">
+              </picture>
+              <span class="service__button"></span>
+            </a>
+          </li>
           <li class="service__item">
+            <a class="service__link" href="#">
             <h3 class="service__subtitle">Монтаж печатных плат</h3>
-            <img class="service__img" src="#" alt="#">
-            <button class="service__button"></button>
-          </a>
-        </li>
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/montage-mobile@1x.webp 1x, img/montage-mobile@2x.webp 2x"
+                type="image/webp">
+              <source media="(max-width: 1023px)" srcset="img/montage-tablet@1x.webp 1x, img/montage-tablet@2x.webp 2x"
+                type="image/webp">
+              <source srcset="img/montage-desktop@1x.webp 1x, img/montage-desktop@2x.webp 2x" type="image/webp">
+              <source media="(max-width: 767px)" srcset="img/montage-mobile@1x.png 1x, img/montage-mobile@2x.png 2x">
+              <source media="(max-width: 1023px)" srcset="img/montage-tablet@1x.png 1x, img/montage-tablet@2x.png 2x">
+              <img class="tours__img" src="img/montage-desktop@1x.png" srcset="img/montage-desktop@2x.png 2x" loading="lazy"
+                width="370" height="620" alt="Фото монтажа печатных плат">
+            </picture>
+            <span class="service__button"></span>
+            </a>
+          </li>
           <li class="service__item">
+            <a class="service__link" href="#">
             <h3 class="service__subtitle">Комплектующие для светотехники</h3>
-            <img class="service__img" src="#" alt="#">
-            <button class="service__button"></button>
-          </a>
-        </li>
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/addition-mobile@1x.webp 1x, img/addition-mobile@2x.webp 2x"
+                type="image/webp">
+              <source media="(max-width: 1023px)" srcset="img/addition-tablet@1x.webp 1x, img/addition-tablet@2x.webp 2x"
+                type="image/webp">
+              <source srcset="img/addition-desktop@1x.webp 1x, img/addition-desktop@2x.webp 2x" type="image/webp">
+              <source media="(max-width: 767px)" srcset="img/addition-mobile@1x.png 1x, img/addition-mobile@2x.png 2x">
+              <source media="(max-width: 1023px)" srcset="img/addition-tablet@1x.png 1x, img/addition-tablet@2x.png 2x">
+              <img class="tours__img" src="img/addition-desktop@1x.png" srcset="img/addition-desktop@2x.png 2x" loading="lazy"
+                width="370" height="620" alt="Фото комплектующих для светотехники">
+            </picture>
+            <span class="service__button"></span>
+            </a>
+          </li>
         </ul>
       </div>
     </section>
@@ -125,20 +194,22 @@
         <h2 class="feedback__title">Остались вопросы? Задайте их нам!</h2>
         <p class="feedback__text">Мы проконсультируем Вас бесплатно</p>
         <form class="feedback__form form" method="POST" action="https://echo.htmlacademy.ru" enctype="multipart/form-data">
+          <div class="form__wrap">
           <p class="form__paragraph">
             <input class="form__input" type="text" name="name" id="name" placeholder="Имя" aria-label="Введите имя" required>
             <label class="visually-hidden" for="name">Введите имя</label>
           </p>
-          <p class="form__paragraph">
+          <p class="form__paragraph form__paragraph--tel">
             <input class="form__input" type="tel" id="tel" name="tel" placeholder="Телефон"
               aria-label="Введите телефон" required>
             <label class="visually-hidden" for="tel">Введите номер телефона</label>
           </p>
-          <p class="form__paragraph">
-            <textarea class="form__input" id="question" name="email" placeholder="Ваш вопрос" aria-label="Введите адрес почты" required>
+        </div>
+          <!-- <p class="form__paragraph"> -->
+            <textarea class="form__input" id="question" name="question" rows=4 placeholder="Ваш вопрос" aria-label="Введите адрес почты" required></textarea>
             <label class="visually-hidden" for="question">Введите ваш вопрос</label>
-          </p>
-          <p class="form__paragraph form__paragraph--checkbox">
+          <!-- </p> -->
+          <p class="form__parag form__parag--checkbox">
             <input class="form__checkbox visually-hidden" type="checkbox" name="checkbox" id="checkbox"
               aria-label="Подтвердите обработку персональных данных" required>
             <label class="form__checkbox-label" for="checkbox">Я согласен на обработку <span class="form__span">моих персональных данных</span></label>
@@ -202,5 +273,4 @@
   </footer>
 </body>
 
-  </head>
 </html>
