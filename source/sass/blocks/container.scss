@@ -1,0 +1,13 @@
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1441px;
+
+  @media (max-width: $breakpoint-tablet) {
+    min-width: $width-tablet;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    min-width: $mobile-width;
+  }
+}

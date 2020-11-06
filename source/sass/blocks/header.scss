@@ -1,0 +1,126 @@
+.header {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  flex: 0 0 auto;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 33px;
+  padding-right: 15px;
+  padding-bottom: 18px;
+  padding-left: 15px;
+}
+
+.header__nav {
+  display: flex;
+}
+
+.header__button {
+  display: block;
+  font-family: "Roboto Condensed", "Courier New", monospace;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $white;
+  background-color: transparent;
+  border: 1px solid $white;
+  border-radius: 5px;
+  padding-top: 13px;
+  padding-right: 26px;
+  padding-bottom: 14px;
+  padding-left: 27px;
+  margin-left: 50px;
+}
+
+.header__contacts span {
+  font-family: "PT Mono", "Courier New", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: $white;
+}
+
+.header__logo {
+  display: flex;
+}
+
+.header__link {
+  margin-right: 16px;
+}
+
+.header__img img {
+  width: 52px;
+  height: 52px;
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+.header__name {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 177px;
+}
+
+.header__first {
+  font-family: "Roboto Condensed", "Courier New", monospace;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 29px;
+  color: $white;
+}
+
+.header__second {
+  font-family: "Roboto", "Courier New", monospace;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: $grey-two;
+}
+
+
+.header__contacts {
+  display: flex;
+  justify-content: space-between;
+  width: 391px;
+}
+
+.header__tel {
+  margin-top: 11px;
+  position: relative;
+}
+
+.header__icon-tel {
+  position: absolute;
+  top: 0;
+  left: -33px;
+  width: 18px;
+  height: 18px;
+}
+
+.header__email {
+  margin-top: 11px;
+  position: relative;
+}
+
+.header__icon-email {
+  position: absolute;
+  top: 2px;
+  left: -39px;
+  width: 19px;
+  height: 14px;
+}

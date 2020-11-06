@@ -1,0 +1,90 @@
+.service {
+  display: flex;
+  background-color: $background;
+}
+
+.service__container {
+  display: flex;
+  flex-direction: column;
+  padding: 98px 135px 100px 135px;
+}
+
+.service__title {
+  margin: 0;
+  margin-bottom: 50px;
+  font-family: "Roboto Condensed", "Courier New", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  color: $white;
+}
+
+.service__list {
+  @include no-list;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.service__item {
+  display: flex;
+  position: relative;
+  margin-bottom: 30px;
+  cursor: pointer;
+
+  &:not(:nth-of-type(3n)) {
+    margin-right: 30px;
+  }
+
+  &::before {
+    content: " ";
+    position: absolute;
+    z-index: 4;
+
+    bottom: 28px;
+    right: 27px;
+
+    width: 6px;
+    height: 9px;
+
+    background-image: url("../img/arrow.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.service__subtitle {
+  display: block;
+  width: 173px;
+  position: absolute;
+  z-index: 2;
+  top: 50px;
+  left: 40px;
+  margin: 0;
+  font-family: "Roboto Condensed", "Courier New", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  color: $white;
+}
+
+.service__button {
+  display: block;
+  width: 63px;
+  height: 63px;
+  position: absolute;
+  z-index: 2;
+  bottom: 4px;
+  right: 0;
+  background-color: $sky;
+  border: none;
+  cursor: pointer;
+}
+
+.service__img img {
+  display: block;
+}
+
+// .service__link {
+//   margin: 0;
+// }
