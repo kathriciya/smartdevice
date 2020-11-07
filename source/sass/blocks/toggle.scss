@@ -1,0 +1,46 @@
+.toggle {
+  display: none;
+
+  @media (max-width: $breakpoint-mobile) {
+    display: block;
+    position: relative;
+    top: -48px;
+    left: 265px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+
+    &::before {
+      content: " ";
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      background-image: url("../img/close.svg");
+      background-repeat: no-repeat;
+      background-size: 18px 18px;
+      background-position: 0 0;
+      bottom: 6px;
+      right: 6px;
+    }
+
+    &:active {
+      &::before {
+        content: " ";
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        background-image: url("../img/open.svg");
+        background-repeat: no-repeat;
+        background-size: 18px 18px;
+        background-position: 0 0;
+        bottom: 6px;
+        right: 6px;
+      }
+    }
+
+    // &:active .sections__list {
+    //   display: block;
+    // }
+  }
+}

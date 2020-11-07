@@ -1,0 +1,100 @@
+.sections {
+  position: relative;
+  width: 516px;
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 243px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 290px;
+    // justify-content: space-between;
+  }
+}
+
+.sections__title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-family: "Roboto Condensed", "Courier New", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #1b2d37;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-bottom: 25px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding-top: 30px;
+    position: relative;
+  }
+}
+
+.sections__list {
+  @include no-list;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 416px;
+  max-height: 100px;
+
+  @media (max-width: $breakpoint-tablet) {
+    max-height: none;
+    width: 100%;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    display: none;
+    overflow: hidden;
+    width: 100%;
+  }
+}
+
+.sections__item {
+  margin: 0;
+  margin-right: 65px;
+  width: 243px;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-right: 0;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+.sections__link {
+  font-family: "PT Mono", "Courier New", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+  color: #1b2d37;
+  opacity: 0.5;
+
+  &:hover {
+    color: $sky;
+  }
+
+  &:active {
+    opacity: 1;
+    color: $sky;
+  }
+}
+
+.sections__toggle {
+  display: none;
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .sections__toggle:active ~ .sections__list {
+    display: block;
+  }
+}

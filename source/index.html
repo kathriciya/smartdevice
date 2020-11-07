@@ -220,57 +220,110 @@
     </section>
   </main>
   <footer class="footer">
-    <div class="footer__logo">
-      <img src="#" alt="Логотип компании">
-      <span>Service Device</span>
-      <span>умные технологии</span>
-    </div>
+    <div class="footer__container container">
+      <div class="footer__top">
+        <div class="footer__first-part">
+        <div class="footer__logo">
+          <a class="footer__link">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/logo-mobile@1x.webp 1x, img/logo-mobile@2x.webp 2x"
+                type="image/webp">
+              <source media="(max-width: 1023px)" srcset="img/logo-desktop@1x.webp 1x, img/logo-desktop@2x.webp 2x"
+                type="image/webp">
+              <source srcset="img/logo-desktop@1x.webp 1x, img/logo-desktop@2x.webp 2x" type="image/webp">
+              <source media="(max-width: 767px)" srcset="img/logo-mobile@1x.png 1x, img/logo-mobile@2x.png 2x">
+              <source media="(max-width: 1023px)" srcset="img/logo-desktop@1x.png 1x, img/logo-desktop@2x.png 2x">
+              <img class="footer__img" src="img/logo-desktop@1x.png" srcset="img/logo-desktop@2x.png 2x" loading="lazy"
+                width="52" height="52" alt="Логотип компании">
+            </picture>
+          </a>
+          <div class="footer__name">
+            <span class="footer__first">Service Device</span>
+            <span class="footer__second">умные технологии</span>
+          </div>
+        </div>
+
+        <span class="footer__block">1999-2018 SD Service Devices</span>
 
     <div class="footer__social social">
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__link social__link--fb" href="https://facebook.com" aria-label="Мы в Фейсбуке" target="_blank"></a>
+          <a class="social__link social__link--fb" href="https://facebook.com" aria-label="Мы в Фейсбуке" target="_blank">
+            <svg class="social__icon social__icon--fb" width="26" height="26">
+              <use xlink:href="img/sprite_auto.svg#icon-fb"></use>
+            </svg></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--ok" href="https://ok.com" aria-label="Мы в Одноклассниках" target="_blank"></a>
+          <a class="social__link social__link--ok" href="https://ok.com" aria-label="Мы в Одноклассниках" target="_blank">
+            <svg class="social__icon social__icon--ok" width="26" height="26">
+              <use xlink:href="img/sprite_auto.svg#icon-ok"></use>
+            </svg></a>
         </li>
         <li class="social__item social__item--vk">
-          <a class="social__link social__link--vk" href="https://vk.com" aria-label="Мы в Вконтакте" target="_blank"></a>
+          <a class="social__link social__link--vk" href="https://vk.com" aria-label="Мы в Вконтакте" target="_blank">
+            <svg class="social__icon social__icon--vk" width="26" height="26">
+              <use xlink:href="img/sprite_auto.svg#icon-vk"></use>
+            </svg></a>
         </li>
       </ul>
     </div>
+  </div>
 
-    <div class="footer__sections">
-      <h3>Разделы сайта</h3>
-      <ul>
-        <li>О компании</li>
-        <li>Продукты</li>
-        <li>Производство печатных плат</li>
-        <li>Монтаж печатных плат</li>
-        <li>Комплектующие</li>
-        <li>Доставка</li>
-        <li>Контакты</li>
+  <div class="footer__second-part">
+    <div class="footer__sections sections">
+      <h3 class="sections__title">Разделы сайта</h3>
+      <button class="sections__toggle toggle" type="button" aria-label="Переключатель"></button>
+      <ul class="sections__list">
+        <li class="sections__item"><a class="sections__link" href="#" aria-label="О компании">О компании</a></li>
+        <li class="sections__item"><a class="sections__link" href="#" aria-label="Продукты">Продукты</a></li>
+        <li class="sections__item"><a class="sections__link" href="#" aria-label="Производство печатных плат">Производство печатных плат</a></li>
+        <li class="sections__item"><a class="sections__link" href="#" aria-label="Монтаж печатных плат">Монтаж печатных плат</a></li>
+        <li class="sections__item"><a class="sections__link" href="#" aria-label="Комплектующие">Комплектующие</a></li>
+        <li class="sections__item"><a class="sections__link" href="#" aria-label="Доставка">Доставка</a></li>
+        <li class="sections__item"><a class="sections__link" href="#" aria-label="Контакты<">Контакты</a></li>
       </ul>
     </div>
 
-    <div class="footer__contacts">
-      <h3>Наш офис</h3>
-      <span>г. Мытищи, Олимпийский проспект, д.10</span>
-      <span>+7 (495) 589-40-50</span>
-      <span>+7 (925) 003-87-67</span>
-      <span>+7 (926) 926-080-79</span>
+    <div class="footer__contacts contacts">
+      <h3 class="contacts__title">Наш офис</h3>
+      <ul class="contacts__list">
+        <li class="contacts__item"><span>г. Мытищи, Олимпийский проспект, д.10</span></li>
+        <li class="contacts__item"><a class="contacts__link" href="tel:+74955894050" aria-label="Наш телефон">+7 (495) 589-40-50</a></li>
+        <li class="contacts__item"><a class="contacts__link" href="tel:+79250038767" aria-label="Наш телефон">+7 (925) 003-87-67</a></li>
+        <li class="contacts__item"><a class="contacts__link" href="tel:+792692608079" aria-label="Наш телефон">+7 (926) 926-080-79</a></li>
+      </ul>
     </div>
+  </div>
+  </div>
 
-    <div></div>
+    <div class="footer__copyright copyright">
+      <div class="copyright__first">
+        <span>Все права защищены</span>
+        <span>1999-2018 SD Service Devices</span>
+      </div>
+      <div class="copyright__second">
+        <span>Условия конфиденциальности</span>
+        <span>Developed by wow studio</span>
+      </div>
 
-    <div class="footer__copyright">
-      <span>Все права защищены</span>
-      <span>1999-2018 SD Service Devices</span>
-      <span>Условия конфиденциальности</span>
-      <span>Developed by wow studio</span>
-    </div>
-
+  </div>
   </footer>
+  <!-- <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+    </script> -->
 </body>
 
 </html>

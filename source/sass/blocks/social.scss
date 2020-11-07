@@ -1,0 +1,43 @@
+.social {
+  display: flex;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-top: -24px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-top: 0;
+  }
+}
+
+.social__list {
+  @include no-list;
+  display: flex;
+  flex-wrap: wrap;
+  width: 111px;
+}
+
+.social__item {
+  display: flex;
+
+  &:not(:nth-child(3n)) {
+    margin-right: 15px;
+    margin-bottom: 5px;
+  }
+}
+
+.social__link {
+  width: 27px;
+  height: 27px;
+  color: $decorate-color;
+
+  &:hover {
+    color: $sky;
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 1;
+    color: $sky;
+  }
+}
