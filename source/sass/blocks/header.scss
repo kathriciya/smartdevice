@@ -13,6 +13,14 @@
   padding-right: 15px;
   padding-bottom: 18px;
   padding-left: 15px;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 21px 25px 23px 25px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 17px 15px 14px 15px;
+  }
 }
 
 .header__nav {
@@ -38,6 +46,10 @@
   padding-bottom: 14px;
   padding-left: 27px;
   margin-left: 50px;
+
+  @media (max-width: $breakpoint-tablet) {
+    display: none;
+  }
 }
 
 .header__contacts span {
@@ -47,6 +59,11 @@
   font-size: 16px;
   line-height: 18px;
   color: $white;
+  margin-left: 37px;
+
+  @media (max-width: $breakpoint-tablet) {
+    display: none;
+  }
 }
 
 .header__logo {
@@ -57,7 +74,7 @@
   margin-right: 16px;
 }
 
-.header__img img {
+.header__img {
   width: 52px;
   height: 52px;
 
@@ -72,6 +89,10 @@
   display: flex;
   flex-direction: column;
   width: 177px;
+
+  @media (max-width: $breakpoint-mobile) {
+    display: none;
+  }
 }
 
 .header__first {
@@ -96,31 +117,58 @@
 .header__contacts {
   display: flex;
   justify-content: space-between;
-  width: 391px;
+  width: 430px;
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 84px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 74px;
+  }
 }
 
 .header__tel {
   margin-top: 11px;
   position: relative;
+  // width: 250px;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-top: -5px;
+    width: 26px;
+    height: 26px;
+  }
 }
 
 .header__icon-tel {
   position: absolute;
-  top: 0;
-  left: -33px;
   width: 18px;
   height: 18px;
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .header__email {
   margin-top: 11px;
   position: relative;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-top: -3px;
+    width: 28px;
+    height: 21px;
+  }
 }
 
 .header__icon-email {
   position: absolute;
-  top: 2px;
-  left: -39px;
   width: 19px;
   height: 14px;
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 26px;
+    height: 19px;
+  }
 }

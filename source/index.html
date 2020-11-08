@@ -91,6 +91,7 @@
         <h1 class="promo__title">Печатные платы</h1>
         <p class="promo__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
         <a class="promo__button" href="#">Получить бесплатную консультацию</a>
+        <a class="promo__button promo__button--second" href="#">Бесплатная консультация</a>
         <button class="promo__scroll" type="button" aria-label="Скролл вниз">Скролл вниз</button>
       </div>
     </section>
@@ -126,7 +127,7 @@
             технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
           </p>
           <p class="info__text info__text--second">
-            Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог<span>(РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники</span>.<span>Среди наших клиентов крупнейшие Производители светотехники России</span>.</p>
+            Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог <span>(РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники</span>. <span>Среди наших клиентов крупнейшие Производители светотехники России</span>.</p>
           <a class="info__button" href="#">Подробнее</a>
         </div>
       </div>
@@ -146,7 +147,7 @@
                 <source srcset="img/production-desktop@1x.webp 1x, img/production-desktop@2x.webp 2x" type="image/webp">
                 <source media="(max-width: 767px)" srcset="img/production-mobile@1x.png 1x, img/production-mobile@2x.png 2x">
                 <source media="(max-width: 1023px)" srcset="img/production-tablet@1x.png 1x, img/production-tablet@2x.png 2x">
-                <img class="tours__img" src="img/production-desktop@1x.png" srcset="img/production-desktop@2x.png 2x" loading="lazy"
+                <img class="service__img" src="img/production-desktop@1x.png" srcset="img/production-desktop@2x.png 2x" loading="lazy"
                   width="370" height="620" alt="Фото изготовления печатных плат">
               </picture>
               <span class="service__button"></span>
@@ -163,7 +164,7 @@
               <source srcset="img/montage-desktop@1x.webp 1x, img/montage-desktop@2x.webp 2x" type="image/webp">
               <source media="(max-width: 767px)" srcset="img/montage-mobile@1x.png 1x, img/montage-mobile@2x.png 2x">
               <source media="(max-width: 1023px)" srcset="img/montage-tablet@1x.png 1x, img/montage-tablet@2x.png 2x">
-              <img class="tours__img" src="img/montage-desktop@1x.png" srcset="img/montage-desktop@2x.png 2x" loading="lazy"
+              <img class="service__img" src="img/montage-desktop@1x.png" srcset="img/montage-desktop@2x.png 2x" loading="lazy"
                 width="370" height="620" alt="Фото монтажа печатных плат">
             </picture>
             <span class="service__button"></span>
@@ -180,7 +181,7 @@
               <source srcset="img/addition-desktop@1x.webp 1x, img/addition-desktop@2x.webp 2x" type="image/webp">
               <source media="(max-width: 767px)" srcset="img/addition-mobile@1x.png 1x, img/addition-mobile@2x.png 2x">
               <source media="(max-width: 1023px)" srcset="img/addition-tablet@1x.png 1x, img/addition-tablet@2x.png 2x">
-              <img class="tours__img" src="img/addition-desktop@1x.png" srcset="img/addition-desktop@2x.png 2x" loading="lazy"
+              <img class="service__img" src="img/addition-desktop@1x.png" srcset="img/addition-desktop@2x.png 2x" loading="lazy"
                 width="370" height="620" alt="Фото комплектующих для светотехники">
             </picture>
             <span class="service__button"></span>
@@ -191,31 +192,44 @@
     </section>
     <section class="feedback">
       <div class="feedback__container container">
-        <h2 class="feedback__title">Остались вопросы? Задайте их нам!</h2>
-        <p class="feedback__text">Мы проконсультируем Вас бесплатно</p>
-        <form class="feedback__form form" method="POST" action="https://echo.htmlacademy.ru" enctype="multipart/form-data">
-          <div class="form__wrap">
-          <p class="form__paragraph">
-            <input class="form__input" type="text" name="name" id="name" placeholder="Имя" aria-label="Введите имя" required>
-            <label class="visually-hidden" for="name">Введите имя</label>
-          </p>
-          <p class="form__paragraph form__paragraph--tel">
-            <input class="form__input" type="tel" id="tel" name="tel" placeholder="Телефон"
-              aria-label="Введите телефон" required>
-            <label class="visually-hidden" for="tel">Введите номер телефона</label>
-          </p>
+        <div class="feedback__wrap feedback__wrap--jet">
+          <picture>
+            <source srcset="img/jet-desktop@1x.webp 1x, img/jet-desktop@2x.webp 2x" type="image/webp">
+            <img class="feedback__img" src="img/jet-desktop@1x.png" srcset="img/jet-desktop@2x.png 2x" loading="lazy"
+              width="511" height="288" alt="Фото самолета">
+          </picture>
         </div>
-          <!-- <p class="form__paragraph"> -->
-            <textarea class="form__input" id="question" name="question" rows=4 placeholder="Ваш вопрос" aria-label="Введите адрес почты" required></textarea>
+        <div class="feedback__wrap">
+          <h2 class="feedback__title">Остались вопросы? Задайте их нам!</h2>
+          <p class="feedback__text">Мы проконсультируем Вас бесплатно</p>
+          <form class="feedback__form form" method="POST" action="https://echo.htmlacademy.ru"
+            enctype="multipart/form-data">
+            <div class="form__wrap">
+              <p class="form__paragraph">
+                <input class="form__input" type="text" name="name" id="name" placeholder="Имя" aria-label="Введите имя"
+                  required>
+                <label class="visually-hidden" for="name">Введите имя</label>
+              </p>
+              <p class="form__paragraph form__paragraph--tel">
+                <input class="form__input" type="tel" id="tel" name="tel" placeholder="Телефон" aria-label="Введите телефон"
+                  required>
+                <label class="visually-hidden" for="tel">Введите номер телефона</label>
+              </p>
+            </div>
+            <!-- <p class="form__paragraph"> -->
+            <textarea class="form__input" id="question" name="question" rows=4 placeholder="Ваш вопрос"
+              aria-label="Введите адрес почты" required></textarea>
             <label class="visually-hidden" for="question">Введите ваш вопрос</label>
-          <!-- </p> -->
-          <p class="form__parag form__parag--checkbox">
-            <input class="form__checkbox visually-hidden" type="checkbox" name="checkbox" id="checkbox"
-              aria-label="Подтвердите обработку персональных данных" required>
-            <label class="form__checkbox-label" for="checkbox">Я согласен на обработку <span class="form__span">моих персональных данных</span></label>
-          </p>
-          <button class="form__button" type="submit">Задать вопрос</button>
-        </form>
+            <!-- </p> -->
+            <p class="form__parag form__parag--checkbox">
+              <input class="form__checkbox visually-hidden" type="checkbox" name="checkbox" id="checkbox"
+                aria-label="Подтвердите обработку персональных данных" required>
+              <label class="form__checkbox-label" for="checkbox">Я согласен на обработку <span class="form__span">моих
+                  персональных данных</span></label>
+            </p>
+            <button class="form__button" type="submit">Задать вопрос</button>
+          </form>
+        </div>
       </div>
     </section>
   </main>
