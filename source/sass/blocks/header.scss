@@ -47,6 +47,14 @@
   padding-left: 27px;
   margin-left: 50px;
 
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
   @media (max-width: $breakpoint-tablet) {
     display: none;
   }
@@ -133,6 +141,14 @@
   position: relative;
   // width: 250px;
 
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
   @media (max-width: $breakpoint-tablet) {
     margin-top: -5px;
     width: 26px;
@@ -154,6 +170,14 @@
 .header__email {
   margin-top: 11px;
   position: relative;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 
   @media (max-width: $breakpoint-tablet) {
     margin-top: -3px;

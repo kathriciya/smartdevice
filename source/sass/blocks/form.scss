@@ -1,74 +1,141 @@
 .form {
-  width: 570px;
+  // width: 100%;
   margin: 0;
 }
 
-.form__wrap {
+.form__inner {
   display: flex;
+  justify-content: space-between;
+
+  &--first {
+    margin-bottom: 39px;
+
+    @media (max-width: $breakpoint-tablet) {
+      margin-bottom: 41px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    flex-direction: column;
+  }
 }
 
 .form__paragraph {
+  margin: 0;
+  width: 100%;
   margin-right: 30px;
+  // margin-right: 5.3%;
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
 
   &--tel {
     margin-right: 0;
+
+    @media (max-width: $breakpoint-mobile) {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
   }
+
+  &--last {
+    margin-right: 0;
+    margin-bottom: 39px;
+
+    @media (max-width: $breakpoint-tablet) {
+      margin-bottom: 41px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      margin-bottom: 26px;
+    }
+  }
+
+  &--checkbox {
+    margin-right: 0;
+    width: 270px;
+
+    @media (max-width: $breakpoint-tablet) {
+      width: 280px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      width: 290px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.form input::placeholder {
+  color: $white;
+  opacity: 1;
+}
+
+.form textarea::placeholder {
+  color: $white;
+  opacity: 1;
 }
 
 .form__input {
   box-sizing: border-box;
   overflow: hidden;
   width: 100%;
-  height: 43px;
-  padding-top: 16px;
-  padding-right: 25px;
-  padding-bottom: 16px;
-  padding-left: 16px;
+  padding: 14px 18px 14px;
+  border: 1px solid transparent;
+  background-color: rgba(250, 250, 250, 0.1);
+  outline: none;
 
   font-family: "PT Mono", "Courier New", monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
-  // color: $white;
-  line-height: 100%;
-  border: none;
-  border-radius: 0;
-  opacity: 0.1;
+  line-height: 22px;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    border: 1px solid $white;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 11px 18px 17px;
+  }
 }
 
-.form input::-webkit-input-placeholder {
-  color: $white;
-  // opacity: 1;
-}
+.form__paragraph textarea {
+  margin: 0;
+  width: 100%;
+  min-height: 154px;
+  resize: none;
+  padding-top: 11px;
+  padding-left: 17px;
 
-.form input::-moz-placeholder {
-  color: $white;
-  // opacity: 1;
-}
+  @media (max-width: $breakpoint-tablet) {
+    min-height: 160px;
+  }
 
-.form input:-ms-input-placeholder {
-  color: $white;
-  // opacity: 1;
-}
-
-.form input::-ms-input-placeholder {
-  color: $white;
-  // opacity: 1;
-}
-
-.form input::placeholder {
-  color: $white;
-  // opacity: 1;
+  @media (max-width: $breakpoint-mobile) {
+    min-height: 104px;
+  }
 }
 
 
 .form__button {
-  margin-top: 29px;
+  margin: 0;
+  // margin-top: 29px;
   display: block;
   width: 270px;
+  // width: 47.37%;
   padding-top: 14px;
   padding-right: 18px;
-  padding-bottom: 8px;
+  padding-bottom: 13px;
   padding-left: 18px;
   font-family: "Roboto Condensed", "Courier New", monospace;
   font-style: normal;
@@ -80,7 +147,17 @@
   color: $white;
   background-color: transparent;
   border: 1px solid $white;
+  border-radius: 5px;
   cursor: pointer;
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 280px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 290px;
+    margin-bottom: 23px;
+  }
 
   &:hover {
     opacity: 0.8;
@@ -94,31 +171,40 @@
 .form__checkbox-label {
   position: relative;
   display: block;
-  padding: 0 0 0 24px;
+  margin-top: 7px;
+  padding: 0 0 0 40px;
   font-weight: 400;
-  font-size: 10px;
-  line-height: 13px;
+  font-size: 14px;
+  line-height: 16px;
   color: $white;
+  opacity: 0.8;
   cursor: pointer;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-top: 9px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 0 0 0 33px;
+  }
 
   &::before {
     content: " ";
     position: absolute;
-    left: 0;
-    top: -2px;
+    left: 8px;
+    top: 1px;
     z-index: 7;
 
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
 
-    border: none;
-    background-color: $white;
+    border: 1px solid $white;
+    background-color: $sky;
     cursor: pointer;
 
     @media (max-width: $breakpoint-mobile) {
-      top: 2px;
-      width: 20px;
-      height: 20px;
+      left: 1px;
+      top: 1px;
     }
   }
 
@@ -127,16 +213,12 @@
     outline-offset: 10px;
     outline-style: auto;
   }
-
-  @media (max-width: $breakpoint-mobile) {
-    line-height: 12px;
-    padding-left: 28px;
-  }
 }
 
-.form__checkbox:checked + label::before {
+.form__checkbox:checked + .form__checkbox-label::before {
   background-image: url("../img/check.svg");
-  background-position: 2px 3px;
+  background-position: 1px 1px;
   background-repeat: no-repeat;
-  background-size: 14px 13px;
+  background-size: 12px 11px;
+  background-color: $sky;
 }

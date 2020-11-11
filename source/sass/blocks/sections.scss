@@ -1,9 +1,11 @@
 .sections {
   position: relative;
   width: 516px;
+  margin-right: 15px;
 
   @media (max-width: $breakpoint-tablet) {
     width: 243px;
+    margin-right: 0;
   }
 
   @media (max-width: $breakpoint-mobile) {
@@ -57,7 +59,9 @@
 
 .sections__item {
   margin: 0;
-  margin-right: 65px;
+  margin-right: 15%;
+  // margin-right: 65px;
+  // width: 59%;
   width: 243px;
 
   @media (max-width: $breakpoint-tablet) {

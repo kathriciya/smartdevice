@@ -1,8 +1,6 @@
 .promo {
-  // position: relative;
-  // display: flex;
   background-color: $background;
-  background-image: url("../img/promo-desktop@1x.png");
+  background-image: url("../img/promo-desktop@1x.png"), url("../img/start.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
@@ -34,13 +32,13 @@
   position: relative;
   padding-top: 314px;
   padding-right: 15px;
-  padding-bottom: 278px;
+  padding-bottom: 279px;
   padding-left: 15px;
 
   @media (max-width: $breakpoint-tablet) {
     padding-top: 188px;
     padding-right: 245px;
-    padding-bottom: 166px;
+    padding-bottom: 164px;
     padding-left: 92px;
   }
 
@@ -79,7 +77,7 @@
   margin: 0;
   margin-top: 30px;
   margin-left: 93px;
-  width: 683px;
+  // width: 683px;
   position: relative;
   font-family: "PT Mono", "Courier New", monospace;
   font-style: normal;
@@ -139,11 +137,21 @@
   padding-bottom: 15px;
   padding-left: 28px;
   width: 407px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 
   @media (max-width: $breakpoint-tablet) {
     width: 379px;
     margin-left: 46px;
     margin-top: 55px;
+    padding-bottom: 17px;
   }
 
   @media (max-width: $breakpoint-mobile) {
@@ -168,8 +176,9 @@
 
 .promo__scroll {
   position: absolute;
-  top: 734px;
-  left: -31px;
+  padding: 10px 10px;
+  top: 727px;
+  left: -35px;
   font-family: "PT Mono", "Courier New", monospace;
   font-style: normal;
   font-weight: normal;
@@ -180,8 +189,73 @@
   transform: rotate(-90deg);
   background-color: transparent;
   border: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 1;
+  }
 
   @media (max-width: $breakpoint-tablet) {
     display: none;
+  }
+}
+
+.promo__wrap {
+  position: relative;
+  width: 50.83%;
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 100%;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    z-index: 5;
+    width: 100%;
+  }
+}
+
+.promo__picture {
+  display: block;
+  position: absolute;
+  top: 255px;
+  // left: 1037px;
+  left: 54%;
+  // right: 0;
+  // width: 100%;
+  // height: auto;
+  width: 705px;
+  height: 515px;
+
+  @media (max-width: $breakpoint-tablet) {
+    top: 111px;
+    left: 66%;
+    width: 465px;
+    height: 340px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    top: 92px;
+    left: 8%;
+    width: 301px;
+    height: 220px;
+  }
+}
+
+.promo__img {
+  width: 705px;
+  height: 515px;
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 465px;
+    height: 340px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 301px;
+    height: 220px;
   }
 }
