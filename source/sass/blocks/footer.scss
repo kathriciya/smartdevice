@@ -1,5 +1,42 @@
 .footer {
+  position: relative;
   flex-grow: 0;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    height: 1px;
+    background-color: #626962;
+    opacity: 0.2;
+    bottom: 53px;
+    left: 0;
+    right: 0;
+
+    @media (max-width: $breakpoint-tablet) {
+      bottom: 60px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      bottom: 124px;
+    }
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    &::after {
+      content: " ";
+      position: absolute;
+      height: 1px;
+      background-color: #626962;
+      opacity: 0.2;
+      top: 93px;
+      left: 0;
+      right: 0;
+
+      @media (max-width: $breakpoint-mobile) {
+        top: 260px;
+      }
+    }
+  }
 }
 
 .footer__container {
@@ -20,8 +57,14 @@
   @media (max-width: $breakpoint-mobile) {
     padding-top: 47px;
     padding-right: 15px;
-    padding-bottom: 18px;
+    padding-bottom: 7px;
     padding-left: 15px;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .sections input:checked ~ .footer__container::before {
+    top: 500px;
   }
 }
 
@@ -33,21 +76,10 @@
   @media (max-width: $breakpoint-tablet) {
     flex-direction: column;
     margin-bottom: 36px;
-    position: relative;
-
-    &::before {
-      content: " ";
-      position: absolute;
-      width: 100vh;
-      height: 1px;
-      background-color: #626962;
-      opacity: 0.2;
-      top: 76px;
-    }
   }
 
   @media (max-width: $breakpoint-mobile) {
-    @include no-outline;
+    margin-bottom: 26px;
   }
 }
 
@@ -65,17 +97,6 @@
   @media (max-width: $breakpoint-mobile) {
     flex-direction: column;
     margin-bottom: 48px;
-    position: relative;
-
-    &::before {
-      content: " ";
-      position: absolute;
-      width: 100vh;
-      height: 1px;
-      background-color: #626962;
-      opacity: 0.2;
-      bottom: -49px;
-    }
   }
 }
 
@@ -92,21 +113,10 @@
   }
 
   @media (max-width: $breakpoint-mobile) {
-    position: relative;
     flex-direction: column;
     align-items: center;
     width: 100%;
     margin-top: 0;
-
-    &::before {
-      content: " ";
-      position: absolute;
-      width: 100vh;
-      height: 1px;
-      background-color: #626962;
-      opacity: 0.2;
-      top: 73px;
-    }
   }
 }
 

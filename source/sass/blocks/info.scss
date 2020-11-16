@@ -1,5 +1,39 @@
 .info {
+  position: relative;
   display: flex;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    z-index: -2;
+    top: -363px;
+    // left: calc(50% - 785px);
+    left: -242px;
+    width: 636px;
+    height: 717px;
+    background-image: url("../img/info-desktop@1x.png");
+    background-repeat: no-repeat;
+
+    @media (max-width: $breakpoint-tablet) {
+      top: -426px;
+      left: 391px;
+      width: 636px;
+      height: 717px;
+      transform: rotate(180deg);
+      background-image: url("../img/info-desktop@1x.png");
+      background-repeat: no-repeat;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      top: -440px;
+      left: 58px;
+      width: 636px;
+      height: 717px;
+      transform: rotate(180deg);
+      background-image: url("../img/info-desktop@1x.png");
+      background-repeat: no-repeat;
+    }
+  }
 }
 
 .info__container {
@@ -121,12 +155,6 @@
   }
 }
 
-@media (max-width: $breakpoint-tablet) {
-  .info__text span {
-    display: none;
-  }
-}
-
 .info__button {
   display: block;
   margin: 0;
@@ -146,6 +174,7 @@
   padding-left: 13px;
   border: 1px solid $sky;
   border-radius: 5px;
+  background-color: $white;
   cursor: pointer;
 
   &:hover {
@@ -154,5 +183,29 @@
 
   &:active {
     opacity: 0.2;
+  }
+}
+
+.info__dot {
+  display: none;
+
+  @media (max-width: $breakpoint-tablet) {
+    display: inline-block;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .info__part {
+    display: none;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .info__button:active ~ .info__part {
+    display: block;
+  }
+
+  .info__button:active ~ .info__dot {
+    display: none;
   }
 }

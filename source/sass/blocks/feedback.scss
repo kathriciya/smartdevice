@@ -1,8 +1,25 @@
 .feedback {
+  position: relative;
   display: flex;
   background-color: $sky;
   z-index: -1;
-  scroll-behavior: smooth;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    top: -60px;
+    left: calc(50% - 785px);
+    // left: 174px;
+    width: 1890px;
+    height: 764px;
+    background-image: url("../img/feedback-desktop@1x.png");
+    // background-size: 1890px 764px;
+    background-repeat: no-repeat;
+
+    @media (max-width: $breakpoint-tablet) {
+      @include no-outline;
+    }
+  }
 }
 
 .feedback__container {
@@ -32,6 +49,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  // background-color: $sky;
   // width: 650px;
   // width: 48.8%;
   width: 570px;

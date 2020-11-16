@@ -20,6 +20,10 @@
   text-transform: uppercase;
   color: #1b2d37;
   opacity: 0.5;
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-bottom: 20px;
+  }
 }
 
 .copyright__first {
@@ -39,34 +43,14 @@
   width: 813px;
 
   @media (max-width: $breakpoint-tablet) {
-    position: relative;
     margin-top: 22px;
-
-    &::before {
-      content: " ";
-      position: absolute;
-      width: 100vh;
-      height: 1px;
-      background-color: #626962;
-      opacity: 0.2;
-      top: -22px;
-    }
   }
 
   @media (max-width: $breakpoint-mobile) {
-    position: relative;
+    margin-top: 0;
+    padding-top: 30px;
     flex-direction: column;
     align-items: center;
     width: 100%;
-
-    &::before {
-      content: " ";
-      position: absolute;
-      width: 100vh;
-      height: 1px;
-      background-color: #626962;
-      opacity: 0.2;
-      top: -43px;
-    }
   }
 }

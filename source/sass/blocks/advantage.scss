@@ -1,5 +1,24 @@
 .advantage {
+  position: relative;
   display: flex;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    z-index: -2;
+    top: -30px;
+    // left: calc(50% - 785px);
+    left: 148px;
+    width: 1798px;
+    height: 1048px;
+    background-image: url("../img/advantage-desktop@1x.png");
+    // background-size: 2244px 1347px;
+    background-repeat: no-repeat;
+
+    @media (max-width: $breakpoint-tablet) {
+      @include no-outline;
+    }
+  }
 }
 
 .advantage__container {
@@ -41,7 +60,7 @@
   padding-left: 42px;
   padding-right: 43px;
   padding-bottom: 65px;
-  background: $white;
+  background-color: $white;
   border: 1px solid $border-color;
   border-left: 3px solid $sky;
   margin-bottom: 30px;
@@ -73,6 +92,10 @@
     padding-left: 23px;
     padding-right: 21px;
     padding-bottom: 20px;
+
+    &--tag {
+      padding-left: 26px;
+    }
   }
 
   @media (max-width: $breakpoint-mobile) {
@@ -149,6 +172,14 @@
   margin: 0;
   font-size: 16px;
   line-height: 22px;
+}
+
+.advantage__text span {
+  word-spacing: 0.6em;
+
+  @media (max-width: $breakpoint-tablet) {
+    word-spacing: normal;
+  }
 }
 
 .advantage__icon {

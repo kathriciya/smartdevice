@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -24,12 +24,17 @@
       <div class="header__logo">
         <a class="header__link">
           <picture>
+            <!-- 1х: 38px; 2x: 78px -->
             <source media="(max-width: 767px)" srcset="img/logo-mobile@1x.webp 1x, img/logo-mobile@2x.webp 2x" type="image/webp">
+            <!-- 1х: 52px; 2x: 104px -->
             <source media="(max-width: 1023px)" srcset="img/logo-desktop@1x.webp 1x, img/logo-desktop@2x.webp 2x" type="image/webp">
+            <!-- 1х: 52px; 2x: 104px -->
             <source srcset="img/logo-desktop@1x.webp 1x, img/logo-desktop@2x.webp 2x" type="image/webp">
+            <!-- 1х: 38px; 2x: 76px -->
             <source media="(max-width: 767px)" srcset="img/logo-mobile@1x.png 1x, img/logo-mobile@2x.png 2x">
+            <!-- 1х: 52px; 2x: 104px -->
             <source media="(max-width: 1023px)" srcset="img/logo-desktop@1x.png 1x, img/logo-desktop@2x.png 2x">
-            <img class="header__img" src="img/logo-desktop@1x.png" srcset="img/logo-desktop@2x.png 2x" loading="lazy" width="52" height="52" alt="Логотип компании">
+            <!-- 1х: 52px; 2x: 104px --><img class="header__img" src="img/logo-desktop@1x.png" srcset="img/logo-desktop@2x.png 2x" loading="lazy" width="52" height="52" alt="Логотип компании">
           </picture>
         </a>
         <div class="header__name">
@@ -62,7 +67,7 @@
         <p class="popup__text">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
         <form class="popup__form" method="POST" action="https://echo.htmlacademy.ru" enctype="multipart/form-data">
           <p class="popup__paragraph">
-            <input class="popup__input" type="text" name="popup-name" id="popup-name" placeholder="Имя" aria-label="Введите имя" required="">
+            <input class="popup__input popup__input--name" type="text" name="popup-name" id="popup-name" placeholder="Имя" aria-label="Введите имя" required="">
             <label class="visually-hidden" for="popup-name">Введите имя</label>
           </p>
           <p class="popup__paragraph">
@@ -87,21 +92,26 @@
     <section class="promo">
       <div class="promo__container container">
         <div class="promo__wrap">
-        <h1 class="promo__title">Печатные платы</h1>
-        <p class="promo__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <a class="promo__button" href="#feedback">Получить бесплатную консультацию</a>
-        <a class="promo__button promo__button--second" href="#feedback">Бесплатная консультация</a>
-      </div>
+          <h1 class="promo__title">Печатные платы</h1>
+          <p class="promo__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+          <a class="promo__button" href="#feedback">Получить бесплатную консультацию</a>
+          <a class="promo__button promo__button--second" href="#feedback">Бесплатная консультация</a>
+        </div>
         <a class="promo__scroll" href="#advantage" aria-label="Скролл вниз">Скролл вниз</a>
       </div>
       <div class="promo__picture">
         <picture>
+          <!-- 1х: 301px; 2x: 602px -->
           <source media="(max-width: 767px)" srcset="img/matrix-mobile@1x.webp 1x, img/matrix-mobile@2x.webp 2x" type="image/webp">
+          <!-- 1х: 465px; 2x: 930px -->
           <source media="(max-width: 1023px)" srcset="img/matrix-tablet@1x.webp 1x, img/matrix-tablet@2x.webp 2x" type="image/webp">
+          <!-- 1х: 705px; 2x: 1410px -->
           <source srcset="img/matrix-desktop@1x.webp 1x, img/matrix-desktop@2x.webp 2x" type="image/webp">
+          <!-- 1х: 301px; 2x: 602px -->
           <source media="(max-width: 767px)" srcset="img/matrix-mobile@1x.png 1x, img/matrix-mobile@2x.png 2x">
+          <!-- 1х: 465px; 2x: 930px -->
           <source media="(max-width: 1023px)" srcset="img/matrix-tablet@1x.png 1x, img/matrix-tablet@2x.png 2x">
-          <img class="promo__img" src="img/matrix-desktop@1x.png" srcset="img/matrix-desktop@2x.png 2x" loading="lazy" width="705" height="515" alt="Фото печатных плат">
+          <!-- 1х: 705px; 2x: 1410px --><img class="promo__img" src="img/matrix-desktop@1x.png" srcset="img/matrix-desktop@2x.png 2x" loading="lazy" width="705" height="515" alt="Фото печатных плат">
         </picture>
       </div>
     </section>
@@ -132,14 +142,15 @@
               <use xlink:href="img/sprite_auto.svg#icon-detective"></use>
             </svg>
             <h3 class="advantage__subtitle advantage__subtitle--detective">Полная конфиденциальность</h3>
-            <p class="advantage__text">По желанию клиента&emsp;мы обеспечиваем полную конфеденциальность.</p>
+            <p class="advantage__text">По желанию <span>клиента мы</span> обеспечиваем полную конфеденциальность.</p>
           </li>
           <li class="advantage__item advantage__item--tag">
             <svg class="advantage__icon advantage__icon--tag" width="35" height="35">
               <use xlink:href="img/sprite_auto.svg#icon-tag"></use>
             </svg>
             <h3 class="advantage__subtitle advantage__subtitle--tag">Персонализация стоимости</h3>
-            <p class="advantage__text">Мы&emsp;подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту
+            <p class="advantage__text"> <span>Мы подбираем</span> определенную фабрику, поставщиков, вид доставки, чтобы
+              установить ту
               цену, которая Вас устраивает.</p>
           </li>
         </ul>
@@ -156,9 +167,9 @@
           </p>
           <p class="info__text info__text--second">
             Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные
-            платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог <span>(РЖД),
-              РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники</span>. <span>Среди наших клиентов крупнейшие
-              Производители светотехники России</span>.</p>
+            платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог<span class="info__dot">..</span> <span class="info__part">(РЖД),
+              РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие
+              Производители светотехники России.</span></p>
           <a class="info__button" href="#">Подробнее</a>
         </div>
       </div>
@@ -171,12 +182,17 @@
             <a class="service__link" href="#">
               <h3 class="service__subtitle">Производство печатных плат</h3>
               <picture>
+                <!-- 1х: 290px; 2x: 580px -->
                 <source media="(max-width: 767px)" srcset="img/production-mobile@1x.webp 1x, img/production-mobile@2x.webp 2x" type="image/webp">
+                <!-- 1х: 715px; 2x: 1430px -->
                 <source media="(max-width: 1023px)" srcset="img/production-tablet@1x.webp 1x, img/production-tablet@2x.webp 2x" type="image/webp">
+                <!-- 370px; 2x: 740px -->
                 <source srcset="img/production-desktop@1x.webp 1x, img/production-desktop@2x.webp 2x" type="image/webp">
+                <!-- 1х: 290px; 2x: 580px -->
                 <source media="(max-width: 767px)" srcset="img/production-mobile@1x.png 1x, img/production-mobile@2x.png 2x">
+                <!-- 1х: 715px; 2x: 1430px -->
                 <source media="(max-width: 1023px)" srcset="img/production-tablet@1x.png 1x, img/production-tablet@2x.png 2x">
-                <img class="service__img" src="img/production-desktop@1x.png" srcset="img/production-desktop@2x.png 2x" loading="lazy" width="370" height="620" alt="Фото изготовления печатных плат">
+                <!-- 1х: 370px; 2x: 740px --><img class="service__img" src="img/production-desktop@1x.png" srcset="img/production-desktop@2x.png 2x" loading="lazy" width="370" height="620" alt="Фото изготовления печатных плат">
               </picture>
               <span class="service__button"></span>
             </a>
@@ -185,12 +201,17 @@
             <a class="service__link" href="#">
               <h3 class="service__subtitle">Монтаж печатных плат</h3>
               <picture>
+                <!-- 1х: 290px; 2x: 580px -->
                 <source media="(max-width: 767px)" srcset="img/montage-mobile@1x.webp 1x, img/montage-mobile@2x.webp 2x" type="image/webp">
+                <!-- 1х: 715px; 2x: 1430px -->
                 <source media="(max-width: 1023px)" srcset="img/montage-tablet@1x.webp 1x, img/montage-tablet@2x.webp 2x" type="image/webp">
+                <!-- 1х: 370px; 2x: 740px -->
                 <source srcset="img/montage-desktop@1x.webp 1x, img/montage-desktop@2x.webp 2x" type="image/webp">
+                <!-- 1х: 290px; 2x: 580px -->
                 <source media="(max-width: 767px)" srcset="img/montage-mobile@1x.png 1x, img/montage-mobile@2x.png 2x">
+                <!-- 1х: 715px; 2x: 1430px -->
                 <source media="(max-width: 1023px)" srcset="img/montage-tablet@1x.png 1x, img/montage-tablet@2x.png 2x">
-                <img class="service__img" src="img/montage-desktop@1x.png" srcset="img/montage-desktop@2x.png 2x" loading="lazy" width="370" height="620" alt="Фото монтажа печатных плат">
+                <!-- 1х: 370px; 2x: 740px --><img class="service__img" src="img/montage-desktop@1x.png" srcset="img/montage-desktop@2x.png 2x" loading="lazy" width="370" height="620" alt="Фото монтажа печатных плат">
               </picture>
               <span class="service__button"></span>
             </a>
@@ -199,12 +220,17 @@
             <a class="service__link" href="#">
               <h3 class="service__subtitle service__subtitle--last">Комплектующие для светотехники</h3>
               <picture>
+                <!-- 1х: 290px; 2x: 580px -->
                 <source media="(max-width: 767px)" srcset="img/addition-mobile@1x.webp 1x, img/addition-mobile@2x.webp 2x" type="image/webp">
+                <!-- 1х: 715px; 2x: 1430px -->
                 <source media="(max-width: 1023px)" srcset="img/addition-tablet@1x.webp 1x, img/addition-tablet@2x.webp 2x" type="image/webp">
+                <!-- 1х: 370px; 2x: 740px -->
                 <source srcset="img/addition-desktop@1x.webp 1x, img/addition-desktop@2x.webp 2x" type="image/webp">
+                <!-- 1х: 290px; 2x: 580px -->
                 <source media="(max-width: 767px)" srcset="img/addition-mobile@1x.png 1x, img/addition-mobile@2x.png 2x">
+                <!-- 1х: 715px; 2x: 1430px -->
                 <source media="(max-width: 1023px)" srcset="img/addition-tablet@1x.png 1x, img/addition-tablet@2x.png 2x">
-                <img class="service__img" src="img/addition-desktop@1x.png" srcset="img/addition-desktop@2x.png 2x" loading="lazy" width="370" height="620" alt="Фото комплектующих для светотехники">
+                <!-- 1х: 370px; 2x: 740px --><img class="service__img" src="img/addition-desktop@1x.png" srcset="img/addition-desktop@2x.png 2x" loading="lazy" width="370" height="620" alt="Фото комплектующих для светотехники">
               </picture>
               <span class="service__button"></span>
             </a>
@@ -236,7 +262,8 @@
               <button class="form__button" type="submit">Задать вопрос</button>
               <p class="form__paragraph form__paragraph--checkbox">
                 <input class="form__checkbox visually-hidden" type="checkbox" name="checkbox" id="checkbox" aria-label="Подтвердите обработку персональных данных" required="">
-                <label class="form__checkbox-label" for="checkbox" tabindex="0">Я согласен на обработку персональных данных</label>
+                <label class="form__checkbox-label" for="checkbox" tabindex="0">Я согласен на обработку персональных
+                  данных</label>
               </p>
             </div>
           </form>
@@ -251,12 +278,17 @@
           <div class="footer__logo">
             <a class="footer__link">
               <picture>
+                <!-- 1х: 38px; 2x: 78px -->
                 <source media="(max-width: 767px)" srcset="img/logo-mobile@1x.webp 1x, img/logo-mobile@2x.webp 2x" type="image/webp">
+                <!-- 1х: 52px; 2x: 104px -->
                 <source media="(max-width: 1023px)" srcset="img/logo-desktop@1x.webp 1x, img/logo-desktop@2x.webp 2x" type="image/webp">
+                <!-- 1х: 52px; 2x: 104px -->
                 <source srcset="img/logo-desktop@1x.webp 1x, img/logo-desktop@2x.webp 2x" type="image/webp">
+                <!-- 1х: 38px; 2x: 78px -->
                 <source media="(max-width: 767px)" srcset="img/logo-mobile@1x.png 1x, img/logo-mobile@2x.png 2x">
+                <!-- 1х: 52px; 2x: 104px -->
                 <source media="(max-width: 1023px)" srcset="img/logo-desktop@1x.png 1x, img/logo-desktop@2x.png 2x">
-                <img class="footer__img" src="img/logo-desktop@1x.png" srcset="img/logo-desktop@2x.png 2x" loading="lazy" width="52" height="52" alt="Логотип компании">
+                <!-- 1х: 52px; 2x: 104px --><img class="footer__img" src="img/logo-desktop@1x.png" srcset="img/logo-desktop@2x.png 2x" loading="lazy" width="52" height="52" alt="Логотип компании">
               </picture>
             </a>
             <div class="footer__name">
@@ -291,10 +323,10 @@
           </div>
         </div>
 
-        <div class="footer__second-part">
+        <div class="footer__second-part ac-container">
           <div class="footer__sections sections">
-            <h3 class="sections__title">Разделы сайта</h3>
-            <button class="sections__toggle toggle" type="button" aria-label="Переключатель"></button>
+            <input type="checkbox" id="sections" name="sections">
+            <label for="sections">Разделы сайта</label>
             <ul class="sections__list">
               <li class="sections__item"><a class="sections__link" href="#" aria-label="О компании">О компании</a></li>
               <li class="sections__item"><a class="sections__link" href="#" aria-label="Продукты">Продукты</a></li>
@@ -309,7 +341,8 @@
           </div>
 
           <div class="footer__contacts contacts">
-            <h3 class="contacts__title">Наш офис</h3>
+            <input type="checkbox" id="contacts" name="contacts">
+            <label for="contacts">Наш офис</label>
             <ul class="contacts__list">
               <li class="contacts__item"><span>г. Мытищи, Олимпийский проспект, д.10</span></li>
               <li class="contacts__item"><a class="contacts__link" href="tel:+74955894050" aria-label="Наш телефон">+7
@@ -334,7 +367,7 @@
         </div>
 
       </div>
-      </div>
+    </div>
   </footer>
   <script src="js/script.js" async=""></script>
 </body>

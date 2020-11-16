@@ -9,12 +9,23 @@
   }
 
   @media (max-width: $breakpoint-mobile) {
-    width: 290px;
-    // justify-content: space-between;
+    position: relative;
+    width: 100%;
+
+    &::before {
+      content: " ";
+      position: absolute;
+      height: 1px;
+      background-color: #626962;
+      opacity: 0.2;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+    }
   }
 }
 
-.sections__title {
+.sections label {
   margin: 0;
   margin-bottom: 30px;
   font-family: "Roboto Condensed", "Courier New", monospace;
@@ -31,9 +42,44 @@
   }
 
   @media (max-width: $breakpoint-mobile) {
+    margin-bottom: 26px;
     padding-top: 30px;
     position: relative;
+    display: block;
+    cursor: pointer;
+
+    &::before {
+      content: " ";
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      background-image: url("../img/close.svg");
+      background-repeat: no-repeat;
+      background-size: 18px 18px;
+      background-position: 0 0;
+      bottom: -1px;
+      right: 2px;
+    }
   }
+}
+
+.sections input:checked + label {
+  &::before {
+    content: " ";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-image: url("../img/open.svg");
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-position: 0 0;
+    bottom: -1px;
+    right: 2px;
+  }
+}
+
+.sections input {
+  display: none;
 }
 
 .sections__list {
@@ -55,6 +101,10 @@
     overflow: hidden;
     width: 100%;
   }
+}
+
+.sections input:checked ~ .sections__list {
+  display: block;
 }
 
 .sections__item {
@@ -90,15 +140,5 @@
   &:active {
     opacity: 1;
     color: $sky;
-  }
-}
-
-.sections__toggle {
-  display: none;
-}
-
-@media (max-width: $breakpoint-mobile) {
-  .sections__toggle:active ~ .sections__list {
-    display: block;
   }
 }

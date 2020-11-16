@@ -1,15 +1,17 @@
 .popup {
   display: none;
-  position: relative;
-  padding: 136px 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 136px;
 
   &--show {
     display: block;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    z-index: 8;
+    z-index: 9;
   }
 
   @media (max-width: $breakpoint-tablet) {
