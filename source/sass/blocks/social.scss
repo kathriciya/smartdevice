@@ -10,14 +10,14 @@
   }
 }
 
-.social__list {
+.social ul {
   @include no-list;
   display: flex;
   flex-wrap: wrap;
   width: 111px;
 }
 
-.social__item {
+.social li {
   display: flex;
 
   &:not(:nth-child(3n)) {
@@ -26,7 +26,7 @@
   }
 }
 
-.social__link {
+.social a {
   width: 27px;
   height: 27px;
   color: $decorate-color;

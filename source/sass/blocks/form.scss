@@ -1,5 +1,4 @@
 .form {
-  // width: 100%;
   margin: 0;
 }
 
@@ -7,15 +6,15 @@
   display: flex;
   justify-content: space-between;
 
-  &--first {
-    margin-bottom: 39px;
+  &:first-child {
+    margin-bottom: 31px;
 
     @media (max-width: $breakpoint-tablet) {
-      margin-bottom: 41px;
+      margin-bottom: 32px;
     }
 
     @media (max-width: $breakpoint-mobile) {
-      margin-bottom: 30px;
+      margin-bottom: 21px;
     }
   }
 
@@ -24,57 +23,84 @@
   }
 }
 
-.form__paragraph {
+.form__name {
   margin: 0;
   width: 100%;
   margin-right: 30px;
-  // margin-right: 5.3%;
 
   @media (max-width: $breakpoint-mobile) {
     margin-right: 0;
-    margin-bottom: 30px;
-  }
-
-  &--tel {
-    margin-right: 0;
-
-    @media (max-width: $breakpoint-mobile) {
-      margin-right: 0;
-      margin-bottom: 0;
-    }
-  }
-
-  &--last {
-    margin-right: 0;
-    margin-bottom: 39px;
-
-    @media (max-width: $breakpoint-tablet) {
-      margin-bottom: 41px;
-    }
-
-    @media (max-width: $breakpoint-mobile) {
-      margin-bottom: 26px;
-    }
-  }
-
-  &--checkbox {
-    margin-right: 0;
-    width: 270px;
-
-    @media (max-width: $breakpoint-tablet) {
-      width: 280px;
-    }
-
-    @media (max-width: $breakpoint-mobile) {
-      width: 290px;
-      margin-bottom: 0;
-    }
+    margin-bottom: 20px;
   }
 }
 
-.form input::placeholder {
+.form__tel {
+  margin: 0;
+  width: 100%;
+}
+
+.form__checkbox {
+  margin: 0;
+  width: 270px;
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 280px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 290px;
+  }
+}
+
+.form__questions {
+  margin: 0;
+  width: 100%;
+  margin-right: 0;
+  margin-bottom: 33px;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-bottom: 33px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-bottom: 18px;
+  }
+}
+
+.form textarea {
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0;
+  width: 100%;
+  min-height: 154px;
+  resize: none;
+  padding-top: 11px;
+  padding-left: 17px;
+  border: 1px solid transparent;
+  background-color: rgba(250, 250, 250, 0.1);
+  outline: none;
+
+  font-family: "PT Mono", "Courier New", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
   color: $white;
-  opacity: 1;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    border: 1px solid $white;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    min-height: 160px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 11px 18px 17px;
+    min-height: 104px;
+  }
 }
 
 .form textarea::placeholder {
@@ -82,7 +108,13 @@
   opacity: 1;
 }
 
-.form__input {
+.form input::placeholder {
+  color: $white;
+  opacity: 1;
+}
+
+.form input[type="text"],
+.form input[type="tel"] {
   box-sizing: border-box;
   overflow: hidden;
   width: 100%;
@@ -109,66 +141,7 @@
   }
 }
 
-.form__paragraph textarea {
-  margin: 0;
-  width: 100%;
-  min-height: 154px;
-  resize: none;
-  padding-top: 11px;
-  padding-left: 17px;
-
-  @media (max-width: $breakpoint-tablet) {
-    min-height: 160px;
-  }
-
-  @media (max-width: $breakpoint-mobile) {
-    min-height: 104px;
-  }
-}
-
-
-.form__button {
-  margin: 0;
-  // margin-top: 29px;
-  display: block;
-  width: 270px;
-  // width: 47.37%;
-  padding-top: 14px;
-  padding-right: 18px;
-  padding-bottom: 13px;
-  padding-left: 18px;
-  font-family: "Roboto Condensed", "Courier New", monospace;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: $white;
-  background-color: transparent;
-  border: 1px solid $white;
-  border-radius: 5px;
-  cursor: pointer;
-
-  @media (max-width: $breakpoint-tablet) {
-    width: 280px;
-  }
-
-  @media (max-width: $breakpoint-mobile) {
-    width: 290px;
-    margin-bottom: 23px;
-  }
-
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.5;
-  }
-}
-
-.form__checkbox-label {
+.form label {
   position: relative;
   display: block;
   margin-top: 7px;
@@ -215,10 +188,50 @@
   }
 }
 
-.form__checkbox:checked + .form__checkbox-label::before {
+.form input[type="checkbox"]:checked + label::before {
   background-image: url("../img/check.svg");
   background-position: 1px 1px;
   background-repeat: no-repeat;
   background-size: 12px 11px;
   background-color: $sky;
+}
+
+.form__button {
+  margin: 0;
+  display: block;
+  width: 270px;
+  padding-top: 14px;
+  padding-right: 18px;
+  padding-bottom: 13px;
+  padding-left: 18px;
+  font-family: "Roboto Condensed", "Courier New", monospace;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $white;
+  background-color: transparent;
+  border: 1px solid $white;
+  border-radius: 5px;
+  cursor: pointer;
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 280px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 290px;
+    margin-bottom: 23px;
+    padding-bottom: 14px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }

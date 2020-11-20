@@ -13,7 +13,7 @@
     right: 0;
 
     @media (max-width: $breakpoint-tablet) {
-      bottom: 60px;
+      bottom: 63px;
     }
 
     @media (max-width: $breakpoint-mobile) {
@@ -28,7 +28,7 @@
       height: 1px;
       background-color: #626962;
       opacity: 0.2;
-      top: 93px;
+      top: 96px;
       left: 0;
       right: 0;
 
@@ -71,7 +71,7 @@
 .footer__top {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 53px;
+  margin-bottom: 59px;
 
   @media (max-width: $breakpoint-tablet) {
     flex-direction: column;
@@ -79,14 +79,13 @@
   }
 
   @media (max-width: $breakpoint-mobile) {
-    margin-bottom: 26px;
+    margin-bottom: 0;
   }
 }
 
 .footer__first-part {
   display: flex;
   flex-direction: column;
-  // margin-right: 200px;
 
   @media (max-width: $breakpoint-tablet) {
     align-items: center;
@@ -104,7 +103,6 @@
   display: flex;
   justify-content: space-between;
   width: 69.9%;
-  // width: 991px;
 
   @media (max-width: $breakpoint-tablet) {
     width: 100%;
@@ -120,7 +118,6 @@
   }
 }
 
-// Логотип
 .footer__logo {
   display: flex;
   margin-bottom: 50px;
@@ -134,43 +131,38 @@
   }
 }
 
-.footer__link {
+.footer__logo a {
   margin-right: 16px;
 }
 
-.footer__img img {
+.footer img {
   width: 52px;
   height: 52px;
-
-  @media (max-width: $breakpoint-mobile) {
-    width: 38px;
-    height: 38px;
-  }
 }
 
 .footer__name {
-  margin-top: 5px;
+  margin-top: 6px;
   display: flex;
   flex-direction: column;
   width: 150px;
 }
 
-.footer__first {
-  font-family: "Roboto Condensed", "Courier New", monospace;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 25px;
-  line-height: 29px;
-  color: #203c42;
-}
-
-.footer__second {
+.footer__name span {
   font-family: "Roboto", "Courier New", monospace;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
   color: #788891;
+
+  &:first-child {
+    font-family: "Roboto Condensed", "Courier New", monospace;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 29px;
+    color: #203c42;
+  }
 }
 
 .footer__block {

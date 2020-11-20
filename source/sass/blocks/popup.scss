@@ -24,7 +24,7 @@
   position: relative;
   width: 490px;
   margin: 0 auto;
-  padding: 31px 40px 10px 40px;
+  padding: 31px 40px 7px 40px;
   background: $sky;
 }
 
@@ -50,7 +50,7 @@
   }
 }
 
-.popup__title {
+.popup p {
   margin: 0;
   margin-bottom: 11px;
   font-family: "Roboto Condensed", "Courier New", monospace;
@@ -61,39 +61,59 @@
   color: $white;
 }
 
-.popup__text {
+.popup span {
+  display: block;
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 31px;
   line-height: 22px;
   color: $white;
   width: 382px;
 }
 
-// Форма
 
-.popup__form {
+.popup form {
   display: flex;
   flex-wrap: wrap;
   position: relative;
 }
 
-.popup__paragraph {
+.popup__inner {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 31px;
   width: 100%;
-
-  &--last {
-    margin-bottom: 28px;
-  }
 }
 
-.popup__paragraph textarea {
+.popup__question {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 28px;
+}
+
+.popup textarea {
+  box-sizing: border-box;
+  overflow: hidden;
   margin: 0;
   width: 100%;
   min-height: 104px;
   resize: none;
   padding-top: 13px;
   padding-left: 24px;
+  border: 1px solid transparent;
+  background-color: rgba(250, 250, 250, 0.1);
+  outline: none;
+
+  font-family: "PT Mono", "Courier New", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    border: 1px solid $white;
+  }
 }
 
 
@@ -107,7 +127,8 @@
   opacity: 1;
 }
 
-.popup__input {
+.popup input[type="text"],
+.popup input[type="tel"] {
   box-sizing: border-box;
   width: 100%;
   padding: 14px 24px 14px;
@@ -129,7 +150,7 @@
   }
 }
 
-.popup__checkbox-label {
+.popup label {
   position: relative;
   display: block;
   padding-left: 49px;
@@ -162,7 +183,7 @@
   }
 }
 
-.popup__checkbox:checked + .popup__checkbox-label::before {
+.popup input[type="checkbox"]:checked + label::before {
   background-image: url("../img/check.svg");
   background-position: 1px 1px;
   background-repeat: no-repeat;
@@ -172,7 +193,7 @@
 .popup__button {
   display: block;
   width: 100%;
-  margin-bottom: 33px;
+  margin-bottom: 36px;
   padding-top: 14px;
   padding-right: 28px;
   padding-bottom: 12px;

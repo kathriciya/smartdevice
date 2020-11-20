@@ -6,14 +6,13 @@
 .service__container {
   display: flex;
   flex-direction: column;
-  padding: 88px 15px 100px 15px;
+  padding: 88px 15px 101px 15px;
   width: 71.06%;
   min-width: 1024px;
   max-width: 1200px;
 
   @media (max-width: $breakpoint-tablet) {
     padding: 51px 25px 47px 25px;
-    // width: 75.27%;
     width: 100%;
     min-width: 770px;
     max-width: 1023px;
@@ -25,7 +24,7 @@
   }
 }
 
-.service__title {
+.service h2 {
   margin: 0;
   margin-bottom: 50px;
   font-family: "Roboto Condensed", "Courier New", monospace;
@@ -51,21 +50,18 @@
   }
 }
 
-.service__list {
+.service ul {
   @include no-list;
   display: flex;
   flex-wrap: wrap;
 }
 
-.service__item {
-  // width: 370px;
-  // 37000/1170
+.service li {
   width: 31.62%;
   display: flex;
   margin-bottom: 30px;
 
   &:not(:nth-of-type(3n)) {
-    // margin-right: 30px;
     margin-right: 2.5%;
 
     @media (max-width: $breakpoint-tablet) {
@@ -74,7 +70,6 @@
     }
 
     @media (max-width: $breakpoint-mobile) {
-      // width: 100%;
       margin-bottom: 31px;
     }
   }
@@ -84,7 +79,7 @@
   }
 }
 
-.service__link {
+.service a {
   position: relative;
   border: 1px solid transparent;
   cursor: pointer;
@@ -94,8 +89,8 @@
     position: absolute;
     z-index: 4;
 
-    bottom: 28px;
-    right: 27px;
+    bottom: 26px;
+    right: 24px;
 
     width: 6px;
     height: 9px;
@@ -118,13 +113,13 @@
   }
 }
 
-.service__subtitle {
+.service h3 {
   display: block;
   width: 173px;
   position: absolute;
   z-index: 2;
   top: 50px;
-  left: 40px;
+  left: 44px;
   margin: 0;
   font-family: "Roboto Condensed", "Courier New", monospace;
   font-style: normal;
@@ -136,26 +131,28 @@
   @media (max-width: $breakpoint-tablet) {
     left: 43px;
     top: 40px;
-
-    &--last {
-      top: 50px;
-    }
   }
 
   @media (max-width: $breakpoint-mobile) {
     left: 33px;
     top: 20px;
-
-    &--last {
-      top: 28px;
-    }
   }
 }
 
-.service__button {
+.service li:last-child h3 {
+  @media (max-width: $breakpoint-tablet) {
+    top: 50px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    top: 28px;
+  }
+}
+
+.service span {
   display: block;
-  width: 63px;
-  height: 63px;
+  width: 62px;
+  height: 62px;
   position: absolute;
   z-index: 2;
   bottom: 0;
@@ -168,13 +165,8 @@
   }
 }
 
-.service__img {
+.service img {
   display: block;
   width: 100%;
   height: auto;
-
-  // @media (max-width: $breakpoint-tablet) {
-  //   width: 715px;
-  //   height: 256px;
-  // }
 }

@@ -1,6 +1,6 @@
 .promo {
   background-color: $background;
-  background-image: url("../img/promo-desktop@1x.png"), url("../img/stars.png");
+  background-image: url("../img/promo-desktop@1x.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
@@ -32,14 +32,33 @@
   position: relative;
   padding-top: 314px;
   padding-right: 15px;
-  padding-bottom: 279px;
+  padding-bottom: 275px;
   padding-left: 15px;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    top: 118px;
+    right: calc(50% - 739px);
+    width: 670px;
+    height: 641px;
+    background-image: url("../img/stars-desktop.png");
+    background-repeat: no-repeat;
+  }
 
   @media (max-width: $breakpoint-tablet) {
     padding-top: 188px;
     padding-right: 245px;
     padding-bottom: 164px;
     padding-left: 92px;
+
+    &::before {
+      top: -19px;
+      right: calc(50% - 582px);
+      width: 527px;
+      height: 505px;
+      background-image: url("../img/stars-tablet.png");
+    }
   }
 
   @media (max-width: $breakpoint-mobile) {
@@ -47,10 +66,19 @@
     padding-right: 19px;
     padding-bottom: 70px;
     padding-left: 19px;
+
+    &::before {
+      top: -46px;
+      right: calc(50% - 496px);
+      width: 505px;
+      height: 482px;
+      background-image: url("../img/stars-mobile.png");
+      z-index: 1;
+    }
   }
 }
 
-.promo__title {
+.promo h1 {
   margin: 0;
   margin-left: -5px;
   font-family: "Roboto Condensed", "Courier New", monospace;
@@ -73,11 +101,10 @@
   }
 }
 
-.promo__text {
+.promo p {
   margin: 0;
   margin-top: 30px;
   margin-left: 93px;
-  // width: 683px;
   position: relative;
   font-family: "PT Mono", "Courier New", monospace;
   font-style: normal;
@@ -90,10 +117,10 @@
     font-size: 18px;
     line-height: 28px;
     margin-left: 46px;
-    width: 100%;
   }
 
   @media (max-width: $breakpoint-mobile) {
+    width: 235px;
     font-size: 16px;
     line-height: 25px;
     margin-top: 28px;
@@ -120,7 +147,7 @@
   display: block;
   margin: 0;
   margin-top: 43px;
-  margin-left: 94px;
+  margin-left: 92px;
   font-family: "Roboto Condensed", "Courier New", monospace;
   font-style: normal;
   font-weight: bold;
@@ -134,7 +161,7 @@
   border-radius: 5px;
   padding-top: 17px;
   padding-right: 28px;
-  padding-bottom: 15px;
+  padding-bottom: 18px;
   padding-left: 28px;
   width: 407px;
   cursor: pointer;
@@ -167,7 +194,7 @@
       margin-top: 40px;
       margin-left: 0;
       padding-top: 18px;
-      padding-right: 30px;
+      padding-right: 29px;
       padding-bottom: 17px;
       padding-left: 29px;
     }
@@ -209,12 +236,12 @@
   width: 50.83%;
 
   @media (max-width: $breakpoint-tablet) {
-    width: 100%;
+    width: 433px;
   }
 
   @media (max-width: $breakpoint-mobile) {
-    z-index: 5;
     width: 100%;
+    z-index: 3;
   }
 }
 
@@ -222,11 +249,7 @@
   display: block;
   position: absolute;
   top: 255px;
-  // left: 1037px;
   left: 54%;
-  // right: 0;
-  // width: 100%;
-  // height: auto;
   width: 705px;
   height: 515px;
 
@@ -238,6 +261,7 @@
   }
 
   @media (max-width: $breakpoint-mobile) {
+    z-index: 2;
     top: 92px;
     left: 8%;
     width: 301px;
@@ -245,7 +269,7 @@
   }
 }
 
-.promo__img {
+.promo img {
   width: 705px;
   height: 515px;
 
