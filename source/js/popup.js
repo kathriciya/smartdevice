@@ -34,5 +34,5 @@
   window.popup = {
     show: setShowPopupHandler(),
     remove: setRemovePopupHandler()
-  }
-}) ();
+  };
+})();

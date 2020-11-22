@@ -2,7 +2,6 @@
 
 (function () {
   var OUT = 'Escape';
-  var body = document.querySelector('body');
   var button = document.querySelector('.header__button');
   var popup = document.querySelector('.popup');
   var crossPopup = document.querySelector('.popup__cross');
@@ -30,19 +29,10 @@
     }
   }
 
-  // function setOverlayPressRemovePopupHandler () {
-  //   popup.addEventListener('click', function () {
-  //     popup.classList.remove('popup--show');
-  //     document.body.style.overflow = '';
-  //   });
-  // }
-
-  // document.addEventListener('click', setOverlayPressRemovePopupHandler);
-
   document.addEventListener('keydown', setKeyPressRemovePopupHandler);
 
   window.popup = {
     show: setShowPopupHandler(),
     remove: setRemovePopupHandler()
-  }
-}) ();
+  };
+})();

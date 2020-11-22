@@ -13,7 +13,7 @@
     input.onkeydown = function (evt) {
       var curLen = input.value.length;
       if (!/\d/.test(evt.key)) {
-        evt.preventDefault()
+        evt.preventDefault();
       }
       if (curLen < old) {
         old--;
@@ -39,4 +39,4 @@
     inputPopup: setMaskTel(inputTelPopup),
     telForm: inputTelForm
   };
-}) ();
+})();
