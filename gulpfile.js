@@ -84,9 +84,10 @@ gulp.task('html', function () {
 });
 
 
-gulp.task("js", function () {
-  return gulp.src("source/js/*.js")
-    .pipe(gulp.dest("build/js"));
+gulp.task('js', function () {
+  return gulp.src('source/js/*.js', {ignore: 'source/js/vendor.js'})
+    .pipe(concat('main.js'))
+    .pipe(gulp.dest('build/js'));
 });
 
 gulp.task('copy', function () {
