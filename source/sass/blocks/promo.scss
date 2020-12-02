@@ -98,6 +98,7 @@
   @media (max-width: $breakpoint-mobile) {
     font-size: 40px;
     line-height: 47px;
+    padding-left: calc(50% - 175px);
   }
 }
 
@@ -120,7 +121,6 @@
   }
 
   @media (max-width: $breakpoint-mobile) {
-    width: 235px;
     font-size: 16px;
     line-height: 25px;
     margin-top: 28px;
@@ -189,10 +189,10 @@
     display: none;
 
     @media (max-width: $breakpoint-mobile) {
+      margin: 0 auto;
+      margin-top: 40px;
       display: block;
       width: 284px;
-      margin-top: 40px;
-      margin-left: 0;
       padding-top: 18px;
       padding-right: 29px;
       padding-bottom: 17px;

@@ -1,17 +1,24 @@
 'use strict';
 
 (function () {
-  var anchor = document.querySelectorAll('a[href*="#"]');
+  var scrollForm = document.querySelector('a[href="#feedback"]');
+  var anchorForm = document.querySelector('#feedback');
+  var scrollAdvantage = document.querySelector('a[href="#advantage"]');
+  var anchorAdvantage = document.querySelector('#advantage');
 
-  anchor.addEventListener('click', function (evt) {
+  scrollForm.addEventListener('click', function (evt) {
     evt.preventDefault();
-
-    var blockID = anchor.getAttribute('href').substr(1);
-
-    document.getElementById(blockID).scrollIntoView({
+    anchorForm.scrollIntoView({
       behavior: 'smooth',
       block: 'start'
     });
   });
 
+  scrollAdvantage.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    anchorAdvantage.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
 })();

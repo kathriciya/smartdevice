@@ -4,20 +4,14 @@
   var inputTelPopup = document.querySelector('#popup-tel');
   var inputTelForm = document.querySelector('#tel');
 
-
   function setMaskTel(input) {
     input.onfocus = function () {
       input.value = '+7(';
     };
-    var old = 0;
-    input.onkeydown = function (evt) {
+    input.onkeypress = function (evt) {
       var curLen = input.value.length;
       if (!/\d/.test(evt.key)) {
         evt.preventDefault();
-      }
-      if (curLen < old) {
-        old--;
-        return;
       }
       if (curLen === 6) {
         input.value = input.value + ')-';

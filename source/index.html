@@ -23,23 +23,19 @@
             <!-- 1х: 38px; 2x: 78px -->
             <source media="(max-width: 767px)" srcset="img/logo-mobile@1x.webp 1x, img/logo-mobile@2x.webp 2x"
               type="image/webp">
-            <!-- 1х: 52px; 2x: 104px -->
+            <!-- 1х: 202px; 2x: 404px -->
             <source media="(max-width: 1023px)" srcset="img/logo-desktop@1x.webp 1x, img/logo-desktop@2x.webp 2x"
               type="image/webp">
-            <!-- 1х: 52px; 2x: 104px -->
+            <!-- 1х: 202px; 2x: 404px -->
             <source srcset="img/logo-desktop@1x.webp 1x, img/logo-desktop@2x.webp 2x" type="image/webp">
             <!-- 1х: 38px; 2x: 76px -->
             <source media="(max-width: 767px)" srcset="img/logo-mobile@1x.png 1x, img/logo-mobile@2x.png 2x">
-            <!-- 1х: 52px; 2x: 104px -->
+            <!-- 1х: 202px; 2x: 404px -->
             <source media="(max-width: 1023px)" srcset="img/logo-desktop@1x.png 1x, img/logo-desktop@2x.png 2x">
-            <!-- 1х: 52px; 2x: 104px --><img src="img/logo-desktop@1x.png"
-              srcset="img/logo-desktop@2x.png 2x" loading="lazy" width="52" height="52" alt="Логотип компании">
+            <!-- 1х: 202px; 2x: 404px --><img src="img/logo-desktop@1x.png"
+              srcset="img/logo-desktop@2x.png 2x" loading="lazy" width="202" height="52" alt="Логотип компании">
           </picture>
         </a>
-        <div class="header__name">
-          <span>Smart Device</span>
-          <span>умные технологии</span>
-        </div>
       </div>
       <nav>
         <div class="header__contacts">
@@ -80,12 +76,12 @@
               aria-label="Введите адрес почты" required></textarea>
             <label class="visually-hidden" for="popup-question">Введите ваш вопрос</label>
           </div>
-          <button class="popup__button" type="submit">Отправить</button>
           <div class="popup__inner">
             <input class="visually-hidden" type="checkbox" name="popup-checkbox" id="popup-checkbox"
               aria-label="Подтвердите обработку персональных данных" required>
             <label for="popup-checkbox" tabindex="0">Я согласен на обработку персональных данных</label>
             </div>
+          <button class="popup__button" type="submit">Отправить</button>
         </form>
       </div>
     </div>
@@ -286,13 +282,13 @@
               <label class="visually-hidden" for="question">Введите ваш вопрос</label>
             </div>
             <div class="form__inner">
-              <button class="form__button" type="submit">Задать вопрос</button>
               <div class="form__checkbox">
                 <input class="visually-hidden" type="checkbox" name="checkbox" id="checkbox"
                   aria-label="Подтвердите обработку персональных данных" required>
                 <label for="checkbox" tabindex="0">Я согласен на обработку персональных
                   данных</label>
                 </div>
+              <button class="form__button" type="submit">Задать вопрос</button>
             </div>
           </form>
         </div>
@@ -306,16 +302,12 @@
           <div class="footer__logo">
             <a href="#">
               <picture>
-                <!-- 1х: 52px; 2x: 104px -->
-                <source srcset="img/logo-desktop@1x.webp 1x, img/logo-desktop@2x.webp 2x" type="image/webp">
-                <!-- 1х: 52px; 2x: 104px --><img src="img/logo-desktop@1x.png"
-                  srcset="img/logo-desktop@2x.png 2x" loading="lazy" width="52" height="52" alt="Логотип компании">
+                <!-- 1х: 216px; 2x: 432px -->
+                <source srcset="img/logo-footer@1x.webp 1x, img/logo-footer@2x.webp 2x" type="image/webp">
+                <!-- 1х: 216px; 2x: 432px --><img src="img/logo-footer@1x.png"
+                  srcset="img/logo-footer@2x.png 2x" loading="lazy" width="216" height="52" alt="Логотип компании">
               </picture>
             </a>
-            <div class="footer__name">
-              <span>Service Device</span>
-              <span>умные технологии</span>
-            </div>
           </div>
 
           <span class="footer__block">1999-2018 SD Service Devices</span>
@@ -349,8 +341,9 @@
 
         <div class="footer__second-part">
           <div class="footer__sections sections">
-            <input type="checkbox" id="sections" name="sections">
+            <input type="radio" id="sections" name="block">
             <label for="sections">Разделы сайта</label>
+            <div class="sections__inner">
             <ul>
               <li><a href="#" aria-label="О компании">О компании</a></li>
               <li><a href="#" aria-label="Продукты">Продукты</a></li>
@@ -358,15 +351,18 @@
                   aria-label="Производство печатных плат">Производство печатных плат</a></li>
               <li><a href="#" aria-label="Монтаж печатных плат">Монтаж
                   печатных плат</a></li>
+            </ul>
+            <ul>
               <li><a href="#" aria-label="Комплектующие">Комплектующие</a>
               </li>
               <li><a href="#" aria-label="Доставка">Доставка</a></li>
               <li><a href="#" aria-label="Контакты<">Контакты</a></li>
             </ul>
           </div>
+          </div>
 
           <div class="footer__contacts contacts">
-            <input type="checkbox" id="contacts" name="contacts">
+            <input type="radio" id="contacts" name="block">
             <label for="contacts">Наш офис</label>
             <ul>
               <li><span>г. Мытищи, Олимпийский проспект, д.10</span></li>

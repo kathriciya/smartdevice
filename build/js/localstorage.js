@@ -1,13 +1,32 @@
 'use strict';
 
 (function () {
-  var form = document.querySelector('.form');
-  var question = document.querySelectorAll('textarea');
+  var persons = [];
+  var btn = document.querySelector('.form__button');
+  var users = [];
+  var btnPopup = document.querySelector('.popup__button');
 
-  form.addEventListener('input', function () {
-    question.value = localStorage.question;
-    localStorage.setItem('key', 'value');
-  });
+  function saveUser() {
+    var user = {
+      name: document.querySelector('#popup-name').value,
+      tel: document.querySelector('#popup-tel').value,
+      question: document.querySelector('#popup-question').value
+    };
 
-  // TODO пыталась сохранить вопрос в localStorage
+    users.push(user);
+    localStorage.setItem('users', JSON.stringify(users));
+  }
+  btnPopup.addEventListener('click', saveUser);
+
+  function savePerson() {
+    var person = {
+      name: document.querySelector('#name').value,
+      tel: document.querySelector('#tel').value,
+      question: document.querySelector('#question').value
+    };
+
+    persons.push(person);
+    localStorage.setItem('persons', JSON.stringify(persons));
+  }
+  btn.addEventListener('click', savePerson);
 })();

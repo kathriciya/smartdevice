@@ -36,6 +36,7 @@
   height: 30px;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 
   &::before {
     content: " ";
@@ -81,6 +82,10 @@
   margin: 0;
   margin-bottom: 31px;
   width: 100%;
+
+  &:not(:first-child) {
+    flex-direction: row-reverse;
+  }
 }
 
 .popup__question {

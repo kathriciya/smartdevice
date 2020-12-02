@@ -5,9 +5,11 @@
 .form__inner {
   display: flex;
   justify-content: space-between;
+  flex-direction: row-reverse;
 
   &:first-child {
     margin-bottom: 31px;
+    flex-direction: row;
 
     @media (max-width: $breakpoint-tablet) {
       margin-bottom: 32px;
@@ -15,11 +17,12 @@
 
     @media (max-width: $breakpoint-mobile) {
       margin-bottom: 21px;
+      flex-direction: column;
     }
   }
 
   @media (max-width: $breakpoint-mobile) {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }
 

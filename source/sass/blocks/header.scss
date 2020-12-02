@@ -46,6 +46,7 @@
   padding-bottom: 14px;
   padding-left: 27px;
   margin-left: 50px;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.8;
@@ -69,7 +70,7 @@
 }
 
 .header__logo img {
-  width: 52px;
+  width: 202px;
   height: 52px;
 
   @media (max-width: $breakpoint-mobile) {
@@ -78,41 +79,9 @@
   }
 }
 
-.header__name {
-  margin-top: 5px;
-  display: flex;
-  flex-direction: column;
-  width: 177px;
-
-  @media (max-width: $breakpoint-mobile) {
-    display: none;
-  }
-}
-
-.header__name span {
-  font-family: "Roboto", "Courier New", monospace;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-  color: $grey-two;
-
-  &:first-child {
-    margin-top: 3px;
-    font-family: "Roboto Condensed", "Courier New", monospace;
-    font-weight: bold;
-    font-size: 25px;
-    line-height: 29px;
-    color: $white;
-
-    @media (max-width: $breakpoint-tablet) {
-      margin-top: 0;
-    }
-  }
-}
-
 .header__contacts {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 430px;
 
