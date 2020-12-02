@@ -310,11 +310,14 @@ img {
   margin: 0;
   margin-bottom: 31px;
   width: 100%; }
-  .popup__inner:not(:first-child) {
-    -webkit-box-orient: horizontal;
+  .popup__inner--last {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse; }
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse; }
 
 .popup__question {
   width: 100%;
@@ -422,7 +425,7 @@ img {
     position: absolute;
     width: 16px;
     height: 16px;
-    top: 0;
+    top: 2px;
     left: 0;
     border: 1px solid #ffffff; }
   .popup label:hover, .popup label:focus {
