@@ -59,7 +59,12 @@
 
   function setMaskTel(input) {
     input.onfocus = function () {
-      input.value = '+7(';
+      if (input.value.length === 0) {
+        input.value = '+7(';
+      } else {
+        return;
+      }
+
     };
     input.onkeypress = function (evt) {
       var curLen = input.value.length;
