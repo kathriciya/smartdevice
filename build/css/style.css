@@ -666,6 +666,7 @@ img {
   position: relative;
   margin: 0 auto;
   width: 73.5%;
+  max-width: 1411px;
   z-index: 3; }
   @media (max-width: 1023px) {
     .promo__wrap {
