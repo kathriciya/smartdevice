@@ -495,9 +495,7 @@ img {
 .promo__container {
   position: relative;
   padding-top: 314px;
-  padding-right: 15px;
-  padding-bottom: 275px;
-  padding-left: 15px; }
+  padding-bottom: 275px; }
   .promo__container::before {
     content: " ";
     position: absolute;
@@ -666,6 +664,8 @@ img {
 
 .promo__wrap {
   position: relative;
+  margin: 0 auto;
+  width: 73.5%;
   z-index: 3; }
   @media (max-width: 1023px) {
     .promo__wrap {
