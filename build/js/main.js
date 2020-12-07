@@ -64,7 +64,6 @@
       } else {
         return;
       }
-
     };
     input.onkeypress = function (evt) {
       var curLen = input.value.length;

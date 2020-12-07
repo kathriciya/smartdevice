@@ -26,8 +26,6 @@
 .advantage__container {
   display: flex;
   padding: 110px 15px 40px 15px;
-  width: 71.06%;
-  min-width: 1024px;
   max-width: 1200px;
 
   @media (max-width: $breakpoint-tablet) {
