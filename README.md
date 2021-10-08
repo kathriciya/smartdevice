@@ -1,5 +1,14 @@
-# smartdevice
-Проект Smart Device
+# Smartdevice
+Проект "Smart Device", проект от HTML Academy(акселератор).
+
+## Стек:
+- HTML
+- CSS
+- BEM
+- SASS
+- JS
+- Flex
+- Gulp
 
 Перед запуском проекта рекомендуется установить модули node.js из файла package.json --- команда npm instull
 
